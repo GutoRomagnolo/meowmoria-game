@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="reset.css"/>
+  <link rel="stylesheet" href="cadastro.css"/>
+  <link href="http://fonts.cdnfonts.com/css/nintendo-ds-bios" rel="stylesheet"/>
+  <link href="//db.onlinewebfonts.com/c/5cc329c68b9fa3e2379da4d4b329c7b8?family=3Dventure" 
+    rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <header>
+    <div class="div-navegacao">
+      <nav>
+        <a href="#pagina">
+          <img src="./../assets/Imagens/seta.png" class="icon-seta" alt="Voltar para página inicial"/>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Cadastro</h1>
+      <p>
+        Insira seus dados abaixo para criar sua<br />
+        conta e comecar a jogar.
+      </p>
+      <form>
+        <div class="formulario">
+          <div class="div-nome">
+            <label for="nome-completo">Nome completo:</label>
+            <input type="text" id="nome-completo" required />
+          </div>
+          <div class="div-cpf-aniversario">
+            <div class="div-cpf">
+              <label for="cpf">CPF:</label>
+              <input type="text" id="cpf" required />
+            </div>
+            <div class="div-aniversario">
+              <label for="aniversario">Data de nascimento</label>
+              <input type="date" id="aniversario" required />
+            </div>
+          </div>
+          <div class="div-email-tel">
+            <div class="div-email">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" size="25" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+            </div>
+            <div class="div-telefone">
+              <label for="telefone">Telefone:</label>
+              <input type="tel" id="telefone" size="15" required />
+            </div>
+          </div>
+          <div class="usuario">
+            <div class="quadrado">
+              <img src="./../assets/Imagens/avatar.png" />
+            </div>
+            <div class="div-nome-senha">
+              <label for="apelido"></label>
+              <input type="text" id="apelido" size="35" required placeholder="Seu apelido no jogo" />
+              <label for="senha"></label>
+              <input type="password" id="senha" required placeholder="Sua senha" />
+            </div>
+          </div>
+          <input type="submit" value="Quero me cadastrar" class="enviar" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="div-footer">
+      <p>Autores:</p>
+      <p>
+        Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e Thamires Prado
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

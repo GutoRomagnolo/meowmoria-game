@@ -1,0 +1,173 @@
+@import url('http://fonts.cdnfonts.com/css/nintendo-ds-bios');
+
+@font-face {
+  font-family: "3Dventure";
+  src: url(./../assets/Fontes/3Dventure.ttf);
+
+}
+
+body {
+  font-family: 'Nintendo DS BIOS', sans-serif;
+  font-size: 40px;
+}
+
+.div-navegacao {
+  background-color: black;
+  margin: 40px;
+  box-shadow: -10px 0 0 0 black,
+              10px 0 0 0 black,
+              0 -10px 0 0 black,
+              0 10px 0 0 black;
+}
+
+.icon-seta {
+  width: 2%;
+  margin: 0px 0px 0px 20px;
+}
+
+h1 {
+  font-family: '3Dventure';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 72px;
+  text-align: center;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  margin: 20px;
+}
+
+form {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 500px;
+}
+
+input {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 1px;
+  font-family: 'Nintendo DS BIOS';
+  font-size: 20px;
+  box-shadow: -2px 0 0 0 black,
+              2px 0 0 0 black,
+              0 -2px 0 0 black,
+              0 2px 0 0 black;
+}
+
+.div-nome {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-cpf-aniversario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.div-cpf {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-aniversario {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-email-tel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-telefone {
+  display: flex;
+  flex-direction: column;
+}
+
+.usuario {
+  display: flex;
+  margin: 15px auto;
+}
+
+.quadrado {
+  margin: 10px 20px 10px 0px;
+  border: 0.5px solid black;
+  width: 80px;
+  box-shadow: -2px 0 0 0 black,
+              2px 0 0 0 black,
+              0 -2px 0 0 black,
+              0 2px 0 0 black;
+}
+
+.div-nome-senha {
+  display: flex;
+  flex-direction: column;
+}
+
+::placeholder {
+  font-family: 'Nintendo DS BIOS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 22px;
+}
+
+.enviar {
+  display: flex;
+  box-sizing: border-box;
+  margin: 50px;
+  width: 300px;
+  background: #000000;
+  font-family: 'Nintendo DS BIOS';
+  font-size: 30px;
+  color: #FFFEFE;
+  box-shadow: -7px 0 0 0 black,
+              7px 0 0 0 black,
+              0 -7px 0 0 black,
+              0 7px 0 0 black;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  transform: scale(1.1);
+}
+
+input[value="Quero me cadastrar"] {
+  display: flex;
+  justify-content: center;
+
+}
+
+footer {
+  background-color: #000000;
+  width: 100%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: fixed; 
+  left: 0; 
+  bottom: 0;
+}
+
+
+footer p {
+  font-family: 'Nintendo DS BIOS';
+  font-size: 20px;
+  color: #FFFEFE;
+}
