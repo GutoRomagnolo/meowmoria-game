@@ -83,14 +83,26 @@ input {
 }
 
 .ranking-tabela {
-    border: 2px solid #000000;
+  max-width: 680px;
+  margin: 0 auto;
+  border: 2px solid #000000;
+}
+
+.ranking-tabela__trophy {
+  position: relative;
+}
+
+.ranking-tabela__trophy img {
+  position: absolute;
+  top: -0.5rem;
+  left: -2.5rem;
 }
 
 .ranking-tabela__item {
     width: 100%;
     height: 60px;
-    display: grid;
-    grid-template-columns: 0fr 0.5fr 2fr 2.5fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #000000;
 }
