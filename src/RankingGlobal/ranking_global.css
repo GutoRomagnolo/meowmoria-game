@@ -70,10 +70,6 @@ input {
 .ranking-tabela__item {
     width: 100%;
     height: 60px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
     display: grid;
     grid-template-columns: 0.5fr 2fr 2.5fr 1fr;
     align-items: center;
