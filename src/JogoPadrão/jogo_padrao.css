@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/nintendo-ds-bios');
+@import url("http://fonts.cdnfonts.com/css/nintendo-ds-bios");
 
 @font-face {
   font-family: "3Dventure";
@@ -6,6 +6,39 @@
 }
 
 body {
-  font-family: 'Nintendo DS BIOS', sans-serif;
-  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nintendo DS BIOS", sans-serif;
+  font-size: 2.5rem;
+}
+
+.header-principal {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  box-shadow: -10px 0 0 0 black, 10px 0 0 0 black, 0 -10px 0 0 black, 0 10px 0 0 black;
+  height: 2rem;
+  margin: 10px;
+  justify-content: space-between;
+  font-size: 1.875rem;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.icon-android {
+  padding-left: 2rem;
+}
+
+.nav-opcao {
+  padding-right: 2rem;
+}
+
+.header-nav-icons {
+  padding-right: 0.5rem;
 }
