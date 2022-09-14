@@ -92,6 +92,18 @@ input {
   position: relative;
 }
 
+.trofeu_primeiro {
+  filter: invert(81%) sepia(35%) saturate(2502%) hue-rotate(357deg) brightness(99%) contrast(107%);
+}
+
+.trofeu_segundo {
+  filter: invert(76%) sepia(0%) saturate(2%) hue-rotate(28deg) brightness(92%) contrast(84%);
+}
+
+.trofeu_terceiro {
+  filter: invert(52%) sepia(32%) saturate(5828%) hue-rotate(21deg) brightness(96%) contrast(98%);
+}
+
 .ranking-tabela__trofeu img {
   position: absolute;
   top: -0.5rem;
