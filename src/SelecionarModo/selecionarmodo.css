@@ -12,8 +12,8 @@ h1 {
   font-family: '3Dventure';
   font-style: normal;
   font-weight: 500;
-  font-size: 70px;
-  line-height: 72px;
+  font-size: 4.375rem;
+  line-height: 4.5rem;
   text-align: center;
 }
 
@@ -28,9 +28,9 @@ body {
   display: flex;
   flex-direction: row;
   background-color: black;
-  box-shadow: -10px 0 0 0 black, 10px 0 0 0 black, 0 -10px 0 0 black, 0 10px 0 0 black;
+  box-shadow: -0.625rem 0 0 0 black, 0.625rem 0 0 0 black, 0 -0.625rem 0 0 black, 0 0.625rem 0 0 black;
   height: 2rem;
-  margin: 10px;
+  margin: 0.625rem;
   font-size: 1.875rem;
 }
 
@@ -46,8 +46,8 @@ body {
 .cards{
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
-  padding: 0 250px 0 250px;
+  justify-content: center;
+  padding: 0 18.75rem 0 18.75rem;
   
 }
 
@@ -55,19 +55,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 370px;
-  width: 300px;
+  height: 23.125rem;
+  width: 18.75rem;
   align-items: center;
-  border: 1px solid black;
-  padding: 40px;
-  margin: 20px 0;
-  border-radius: 1px;
+  border: 0.063rem solid black;
+  padding: 1.25rem;
+  margin: 1.25rem 3.125rem;
+  border-radius: 0.063rem;
   font-family: 'Nintendo DS BIOS';
-  font-size: 20px;
-  box-shadow: -2px 0 0 0 black,
-              2px 0 0 0 black,
-              0 -2px 0 0 black,
-              0 2px 0 0 black;
+  font-size: 1.25rem;
+  box-shadow: -0.125rem 0 0 0 black,
+              0.125rem 0 0 0 black,
+              0 -0.125rem 0 0 black,
+              0 0.125rem 0 0 black;
   
 }
 
@@ -75,19 +75,79 @@ body {
   font-family: '3Dventure';
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 30px;
+  font-size: 2.125rem;
+  line-height: 1.875rem;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
 p{
   margin-top: 0;
   margin-bottom: 0;
+  text-align: center;
 }
 
-.icon-people{
-  width: 190px;
-  height: 190px;
+.card-imagem{
+  width: 11.875rem;
+  height: 11.875rem;
+}
+
+.container-tabuleiro{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2.5rem 0 0 0;
+}
+
+.texto-seletor{
+  font-size: 2.5rem;
+  padding-right: 0.75rem;
+}
+
+select{
+  display: flex;
+  justify-content: center;
+  width: 6.25rem;
+  height: 2.5rem;
+  box-shadow: -0.125rem 0 0 0 black,
+              0.125rem 0 0 0 black,
+              0 -0.125rem 0 0 black,
+              0 0.125rem 0 0 black;
+  font-family: 'Nintendo DS BIOS';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.188rem;
+  padding-left: 1.25rem;
+}
+
+.botao{
+  display: flex;
+  justify-content: center;
+  margin: 3.75rem;
+
+}
+
+.enviar {
+  display: flex;
+  box-sizing: border-box;
+  width: 18.75rem;
+  background: #000000;
+  font-family: 'Nintendo DS BIOS';
+  font-size: 1.875rem;
+  color: #FFFEFE;
+  box-shadow: -0.438rem 0 0 0 black,
+              0.438rem 0 0 0 black,
+              0 -0.438rem 0 0 black,
+              0 0.438rem 0 0 black;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  transform: scale(1.1);
+}
+
+input[value="Jogar"] {
+  display: flex;
+  justify-content: center;
 }
