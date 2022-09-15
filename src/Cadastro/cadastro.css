@@ -1,4 +1,7 @@
-@import url('http://fonts.cdnfonts.com/css/nintendo-ds-bios');
+@font-face {
+  font-family: "Nintendo DS BIOS";
+  src: url(./../assets/Fontes/Nintendo-DS-BIOS.ttf);
+}
 
 @font-face {
   font-family: "3Dventure";
@@ -115,6 +118,11 @@ input {
               0 2px 0 0 black;
 }
 
+.avatar {
+  width: 70px;
+  margin: 5px;
+}
+
 .div-nome-senha {
   display: flex;
   flex-direction: column;
@@ -160,11 +168,9 @@ footer {
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  position: fixed; 
   left: 0; 
   bottom: 0;
 }
-
 
 footer p {
   font-family: 'Nintendo DS BIOS';

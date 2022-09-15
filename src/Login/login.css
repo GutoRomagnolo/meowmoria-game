@@ -1,9 +1,11 @@
-@import url('http://fonts.cdnfonts.com/css/nintendo-ds-bios');
+@font-face {
+  font-family: "Nintendo DS BIOS";
+  src: url(./../assets/Fontes/Nintendo-DS-BIOS.ttf)
+}
 
 @font-face {
   font-family: "3Dventure";
   src: url(./../assets/Fontes/3Dventure.ttf);
-
 }
 
 body {
@@ -11,18 +13,18 @@ body {
   font-size: 40px;
 }
 
-.div-navegacao {
+.header-principal {
+  display: flex;
+  flex-direction: row;
   background-color: black;
-  margin: 40px;
-  box-shadow: -10px 0 0 0 black,
-              10px 0 0 0 black,
-              0 -10px 0 0 black,
-              0 10px 0 0 black;
+  box-shadow: -10px 0 0 0 black, 10px 0 0 0 black, 0 -10px 0 0 black, 0 10px 0 0 black;
+  height: 2rem;
+  margin: 10px;
+  font-size: 1.875rem;
 }
 
-.icon-seta {
-  width: 2%;
-  margin: 0px 0px 0px 20px;
+.icon-header {
+  width: 100%;
 }
 
 h1 {
@@ -188,7 +190,6 @@ footer {
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  position: fixed; 
   left: 0; 
   bottom: 0;
 }
