@@ -1,4 +1,7 @@
-@import url("http://fonts.cdnfonts.com/css/nintendo-ds-bios");
+@font-face {
+  font-family: "Nintendo DS BIOS";
+  src: url(./../assets/Fontes/Nintendo-DS-BIOS.ttf);
+}
 
 @font-face {
   font-family: "3Dventure";
