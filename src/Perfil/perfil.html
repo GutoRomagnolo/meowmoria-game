@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8"/>
-  <title>Cadastro</title>
+  <title>Meu perfil</title>
   <link rel="icon" href="./../assets/Imagens/favicon.png"/>
   <link rel="stylesheet" href="./../reset.css"/>
-  <link rel="stylesheet" href="cadastro.css"/>
+  <link rel="stylesheet" href="perfil.css"/>
 </head>
 
 <body>
@@ -22,11 +22,7 @@
 
   <main>
     <section>
-      <h1>Cadastro</h1>
-      <p>
-        Insira seus dados abaixo para criar sua<br />
-        conta e comecar a jogar.
-      </p>
+      <h1>Meu perfil</h1>
       <form>
         <div class="formulario">
           <div class="div-nome">
@@ -36,11 +32,11 @@
           <div class="div-cpf-aniversario">
             <div class="div-cpf">
               <label for="cpf">CPF:</label>
-              <input class="input-padrao" type="text" id="cpf" required />
+              <input class="input-padrao input-desabilitado" type="text" id="cpf" readonly />
             </div>
             <div class="div-aniversario">
               <label for="aniversario">Data de nascimento</label>
-              <input class="input-padrao" type="date" id="aniversario" required />
+              <input class="input-padrao input-desabilitado" type="date" id="aniversario" readonly />
             </div>
           </div>
           <div class="div-email-tel">
@@ -59,12 +55,18 @@
             </div>
             <div class="div-nome-senha">
               <label for="apelido"></label>
-              <input class="input-padrao" type="text" id="apelido" size="35" required placeholder="Seu apelido no jogo" />
+              <input class="input-padrao input-desabilitado" type="text" id="apelido" size="35" readonly placeholder="Seu apelido no jogo" />
               <label for="senha"></label>
               <input class="input-padrao" type="password" id="senha" required placeholder="Sua senha" />
             </div>
           </div>
-          <input type="submit" value="Quero me cadastrar" class="enviar" />
+          <div class="aviso-campos">
+            Os campos que estao marcados em cinza nao podem ser alterados
+          </div>
+          <div class="botoes-acao">
+            <input class="botao-padrao botao-voltar" type="button" value="Voltar" />
+            <input class="botao-padrao botao-atualizar" type="submit" value="Atualizar" />
+          </div>
         </div>
       </form>
     </section>

@@ -14,6 +14,12 @@ body {
   font-size: 40px;
 }
 
+.formulario {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr);
+}
+
 .div-navegacao {
   background-color: black;
   margin: 40px;
@@ -55,12 +61,6 @@ form {
   margin: 0 auto;
 }
 
-.formulario {
-  margin: 20px 0;
-  display: grid;
-  grid-template-columns: repeat(1fr 1fr);
-}
-
 .input-padrao {
   height: 24px;
   border: 1px solid black;
@@ -74,6 +74,21 @@ form {
               2px 0 0 0 black,
               0 -2px 0 0 black,
               0 2px 0 0 black;
+}
+
+.input-desabilitado {
+  background: #f2f2f2;
+  border: 1px solid #999999;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 1px;
+  font-family: 'Nintendo DS BIOS';
+  font-size: 20px;
+  outline: 0;
+  box-shadow: -2px 0 0 0 #999999,
+              2px 0 0 0 #999999,
+              0 -2px 0 0 #999999,
+              0 2px 0 0 #999999;
 }
 
 .div-nome {
@@ -147,28 +162,53 @@ form {
   line-height: 22px;
 }
 
-.enviar {
+.aviso-campos {
+  margin: 0 0 20px 0;
+}
 
+.botoes-acao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+
+.botao-padrao {
   border: 1px solid black;
   padding: 5px;
+  margin: 10px 0;
   border-radius: 1px;
-  outline: 0;
   box-sizing: border-box;
-  margin: 30px auto;
-  width: 300px;
-  background: #000000;
+  outline: 0;
+  text-align: center;
   font-family: 'Nintendo DS BIOS';
   font-size: 30px;
   color: #FFFEFE;
-  box-shadow: -7px 0 0 0 black,
-              7px 0 0 0 black,
-              0 -7px 0 0 black,
-              0 7px 0 0 black;
+  box-shadow: -4px 0 0 0 black,
+              4px 0 0 0 black,
+              0 -4px 0 0 black,
+              0 4px 0 0 black;
   cursor: pointer;
 }
 
-.enviar:hover {
+.botao-padrao:hover {
   transform: scale(1.1);
+}
+
+.botao-voltar {
+  color: #000;
+  box-shadow: -4px 0 0 0 black,
+              4px 0 0 0 black,
+              0 -4px 0 0 black,
+              0 4px 0 0 black;
+}
+
+.botao-atualizar {
+  background: #000000;
+  color: #FFFEFE;
+  box-shadow: -4px 0 0 0 black,
+              4px 0 0 0 black,
+              0 -4px 0 0 black,
+              0 4px 0 0 black;
 }
 
 footer {
