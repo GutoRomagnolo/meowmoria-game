@@ -27,32 +27,39 @@
         </nav>
     </header>
 
-    <section class="menu-lateral">
-      <div>
-        <p>Tempo de partida</p>
-        <p>01:23:01</p>
-      </div>
-      <div class="especificacoes-jogo">
-        <div class="container-modalidade">
-          <p>Modalidade</p>
-          <select id="seletor-modalidade">
-            <option value="classico">Clássico</option>
-            <option value="contra-tempo">Contra o tempo</option>
-          </select>
+    <main class="container-geral">
+      <section class="menu-lateral">
+        <div>
+          <p>Tempo da partida:</p>
+          <p class="timer">01:23:01</p>
         </div>
-        <div class="container-selecionar-tabuleiro">
-          <p>Tabuleiro</p>
-          <select id="seletor-tabuleiro">
-            <option value="2x2">2x2</option>
-            <option value="4x4">4x4</option>
-            <option value="8x8">8x8</option>
-          </select>
+        <div class="especificacoes-jogo">
+          <div class="container-modalidade">
+            <p>Modalidade:</p>
+            <select id="seletor-modalidade">
+              <option value="classico">Clássico</option>
+              <option value="contra-tempo">Contra o tempo</option>
+            </select>
+          </div>
+          <div class="container-selecionar-tabuleiro">
+            <p>Tabuleiro:</p>
+            <select id="seletor-tabuleiro" onChange="updateTableSize()">
+              <option value="2x2">2x2</option>
+              <option value="4x4">4x4</option>
+              <option value="8x8">8x8</option>
+            </select>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <main>
-
+        <div class="container-modo-trapaça">
+          <img src="./../assets/Imagens/cheat-off.svg" class="" alt="Sair do jogo"/>
+          <p>Ativar modo trapaca</p>
+        </div>
+      </section>
+      <section class="container-tabuleiro">
+        <img id="imagem-tabuleiro" alt="Tabuleiro 2x2"/>
+      </section>
     </main>
   </body>
+
+  <script src="./jogo_padrao.js"></script>
 </html>

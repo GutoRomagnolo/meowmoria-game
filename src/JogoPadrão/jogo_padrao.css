@@ -46,11 +46,37 @@ body {
   padding-right: 0.5rem;
 }
 
+.container-geral {
+  display: flex;
+  padding: 2.5rem;
+}
+
 .menu-lateral {
   display: flex;
   flex-direction: column;
 }
 
+.timer {
+  font-size: 4.375rem;
+}
+
 .especificacoes-jogo {
   display: flex;
+}
+
+.container-modo-trapaça {
+  display: flex;
+}
+
+.container-tabuleiro {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabuleiro-2x2 {
+  width: 30rem;
+}
+
+.hide-table {
+  display: none;
 }
