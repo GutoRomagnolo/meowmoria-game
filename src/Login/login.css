@@ -11,6 +11,9 @@
 body {
   font-family: 'Nintendo DS BIOS', sans-serif;
   font-size: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-principal {
@@ -192,6 +195,7 @@ footer {
   justify-content: center; 
   left: 0; 
   bottom: 0;
+  margin-top: auto;
 }
 
 footer p {

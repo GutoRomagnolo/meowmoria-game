@@ -12,6 +12,9 @@
 body {
   font-family: 'Nintendo DS BIOS', sans-serif;
   font-size: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .formulario {
@@ -20,18 +23,18 @@ body {
   grid-template-columns: repeat(1fr 1fr);
 }
 
-.div-navegacao {
+.header-principal {
+  display: flex;
+  flex-direction: row;
   background-color: black;
-  margin: 40px;
-  box-shadow: -10px 0 0 0 black,
-              10px 0 0 0 black,
-              0 -10px 0 0 black,
-              0 10px 0 0 black;
+  box-shadow: -10px 0 0 0 black, 10px 0 0 0 black, 0 -10px 0 0 black, 0 10px 0 0 black;
+  height: 2rem;
+  margin: 10px;
+  font-size: 1.875rem;
 }
 
-.icon-seta {
-  width: 2%;
-  margin: 0px 0px 0px 20px;
+.icon-header {
+  width: 100%;
 }
 
 h1 {
@@ -97,9 +100,9 @@ form {
 }
 
 .div-cpf-aniversario {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-column-gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .div-cpf {
@@ -219,6 +222,7 @@ footer {
   justify-content: center; 
   left: 0; 
   bottom: 0;
+  margin-top: auto;
 }
 
 footer p {

@@ -10,14 +10,8 @@
 </head>
 
 <body>
-  <header>
-    <div class="div-navegacao">
-      <nav>
-        <a href="#pagina">
-          <img src="./../assets/Imagens/seta.png" class="icon-seta" alt="Voltar para página inicial"/>
-        </a>
-      </nav>
-    </div>
+  <header class="header-principal">
+    <img src="./../assets/Imagens/icons-header.svg" class="icon-header" alt="header"/>
   </header>
 
   <main>
@@ -36,7 +30,7 @@
           <div class="div-cpf-aniversario">
             <div class="div-cpf">
               <label for="cpf">CPF:</label>
-              <input class="input-padrao" type="text" id="cpf" required />
+              <input class="input-padrao" type="text" id="cpf" size="30" required />
             </div>
             <div class="div-aniversario">
               <label for="aniversario">Data de nascimento</label>
@@ -64,7 +58,10 @@
               <input class="input-padrao" type="password" id="senha" required placeholder="Sua senha" />
             </div>
           </div>
-          <input type="submit" value="Quero me cadastrar" class="enviar" />
+          <div class="botoes-acao">
+            <input class="botao-padrao botao-voltar" type="button" value="Voltar" />
+            <input class="botao-padrao botao-cadastrar" type="submit" value="Quero me cadastrar" />
+          </div>
         </div>
       </form>
     </section>
