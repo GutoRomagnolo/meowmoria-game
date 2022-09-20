@@ -48,12 +48,31 @@ body {
 
 .container-geral {
   display: flex;
-  padding: 2.5rem;
+  padding: 2.5rem 0 0 6rem;
+}
+
+.container-configuracoes-tabuleiro {
+  display: flex;
+  flex-direction: row;
 }
 
 .menu-lateral {
   display: flex;
   flex-direction: column;
+  cursor: default;
+}
+
+.tempo-de-partida {
+  text-align: center;
+}
+
+.campo-especificacao {
+  text-align: center;
+  font-size: 2.188rem;
+  box-shadow: -0.156rem 0 0 0 black,
+  0.156rem 0 0 0 black,
+  0 -0.156rem 0 0 black,
+  0 0.156rem 0 0 black;
 }
 
 .timer {
@@ -62,10 +81,30 @@ body {
 
 .especificacoes-jogo {
   display: flex;
+  padding-top: 3rem;
+  font-size: 1.875rem;
+}
+
+.container-tamanho-tabuleiro {
+  padding-left: 2rem;
 }
 
 .container-modo-trapaça {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.875rem;
+  padding-top: 3rem;
+}
+
+.icon-trapaca {
+  width: 1.5rem;
+}
+
+.container-meio {
+  padding-left: 16rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-tabuleiro {
@@ -73,10 +112,67 @@ body {
   flex-direction: column;
 }
 
-.tabuleiro-2x2 {
-  width: 30rem;
+.container-ranking {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.hide-table {
-  display: none;
+.ranking-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.875rem 0 1.875rem 0;
+}
+
+.linha-horizontal {
+  background-color: #000;
+  height: 0.125rem;
+  margin: 0;
+}
+
+.card-ranking {
+  padding-bottom: 1rem;
+}
+
+.card-ranking-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  font-size: 1.875rem;
+  box-shadow: -0.156rem 0 0 0 black,
+  0.156rem 0 0 0 black,
+  0 -0.156rem 0 0 black,
+  0 0.156rem 0 0 black;
+}
+
+.container-icone-nome-jogador {
+  display: flex;
+  align-items: center;
+}
+
+.icone-fail {
+  width: 1.458rem;
+}
+
+.nome-jogador {
+  padding-left: 0.5rem;
+}
+
+.container-tempo-data {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.tempo-ranking {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.438rem;
+}
+
+.icone-trofeu {
+  width: 1.875rem;
+  filter: invert(81%) sepia(35%) saturate(2502%) hue-rotate(357deg) brightness(99%) contrast(107%);
 }
