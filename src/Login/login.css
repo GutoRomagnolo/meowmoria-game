@@ -138,6 +138,7 @@ input {
 }
 
 .cadastrar{
+  text-decoration: none;
   display: flex;
   box-sizing: border-box;
   margin: 60px;
