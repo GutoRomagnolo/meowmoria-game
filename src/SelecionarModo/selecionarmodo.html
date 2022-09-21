@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Modo de Jogo</title>
-    
-    <link rel="icon" href="./../assets/Imagens/favicon.png"/>
-    <link rel="stylesheet" href="./../reset.css"/>
-    <link rel="stylesheet" href="selecionarmodo.css" />
-</head>
 
-<body>
+    <link rel="icon" href="./../assets/Imagens/favicon.png" />
+    <link rel="stylesheet" href="./../reset.css" />
+    <link rel="stylesheet" href="selecionarmodo.css" />
+  </head>
+
+  <body>
     <header class="header-principal">
-        <img src="./../assets/Imagens/icons-header.svg" class="icon-header" alt="header"/>
+      <img
+        src="./../assets/Imagens/icons-header.svg"
+        class="icon-header"
+        alt="header"
+      />
     </header>
 
-    <section class="container-principal"> 
-        <h1>Selecione o modo de jogo</h1>
+    <section class="container-principal">
+      <h1>Selecione o modo de jogo</h1>
 
-        <div class="cards">
-            <div class="card-selecao"> 
-                <img src="./../assets/Imagens/people.svg" class="card-imagem" alt="people-classic"/>
-                <p class="card-titulo">Classico</p>
-                <p>O número de pontos acumulado por um jogador corresponde ao total de jogadas necessárias até que todo o tabuleiro tenha sido revelado (quanto menor, melhor).</p>
-            </div>
-    
-            <div class="card-selecao"> 
-                <img src="./../assets/Imagens/people-running.svg" class="card-imagem" alt="people-timemode"/>
-                <p class="card-titulo">Contra o tempo</p>
-                <p>Muito similar ao clássico, com a adicao de um contador. você deve descobrir todos os pares antes que o contador chegue a zero para nao ser derrotado!</p>
-            </div>
-        </div>
-        
-        <div class="container-tabuleiro">
-            <p class="texto-seletor">Tamanho do Tabuleiro:</p>
-            <select id="seletor-tabuleiro">
-              <option value="tabuleiro-2x2">2x2</option>
-              <option value="tabuleiro-4x4">4x4</option>
-              <option value="tabuleiro-8x8">8x8</option>
-            </select>
-          </div>
-        
-        <div class="botao">
-            <input type="submit" value="Jogar" class="enviar" />
-        </div>
+      <div class="cards">
+        <a href="./../JogoPadrão/jogo_padrao.html" class="card-selecao">
+          <img
+            src="./../assets/Imagens/people.svg"
+            class="card-imagem"
+            alt="people-classic"
+          />
+          <p class="card-titulo">Classico</p>
+          <p>
+            O número de pontos acumulado por um jogador corresponde ao total de
+            jogadas necessárias até que todo o tabuleiro tenha sido revelado
+            (quanto menor, melhor).
+          </p>
+        </a>
 
+        <a href="./../JogoPadrão/jogo_padrao.html" class="card-selecao">
+          <img
+            src="./../assets/Imagens/people-running.svg"
+            class="card-imagem"
+            alt="people-timemode"
+          />
+          <p class="card-titulo">Contra o tempo</p>
+          <p>
+            Muito similar ao clássico, com a adicao de um contador. você deve
+            descobrir todos os pares antes que o contador chegue a zero para nao
+            ser derrotado!
+          </p>
+        </a>
+      </div>
+
+      <div class="container-tabuleiro">
+        <p class="texto-seletor">Tamanho do Tabuleiro:</p>
+        <select id="seletor-tabuleiro">
+          <option value="tabuleiro-2x2">2x2</option>
+          <option value="tabuleiro-4x4">4x4</option>
+          <option value="tabuleiro-8x8">8x8</option>
+        </select>
+      </div>
+
+      <div class="botao">
+        <input type="submit" value="Jogar" class="enviar" />
+      </div>
     </section>
-
-</body>
+  </body>
 </html>
