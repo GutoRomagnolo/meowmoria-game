@@ -29,37 +29,68 @@
 
     <main class="container-geral">
       <section class="menu-lateral">
-        <div>
+        <div class="tempo-de-partida">
           <p>Tempo da partida:</p>
           <p class="timer">01:23:01</p>
         </div>
         <div class="especificacoes-jogo">
           <div class="container-modalidade">
             <p>Modalidade:</p>
-            <select id="seletor-modalidade">
-              <option value="classico">Clássico</option>
-              <option value="contra-tempo">Contra o tempo</option>
-            </select>
+            <p class="campo-especificacao">Clássico</p>
           </div>
-          <div class="container-selecionar-tabuleiro">
+          <div class="container-tamanho-tabuleiro">
             <p>Tabuleiro:</p>
-            <select id="seletor-tabuleiro" onChange="updateTableSize()">
-              <option value="2x2">2x2</option>
-              <option value="4x4">4x4</option>
-              <option value="8x8">8x8</option>
-            </select>
+            <p class="campo-especificacao">8x8</p>
           </div>
         </div>
         <div class="container-modo-trapaça">
-          <img src="./../assets/Imagens/cheat-off.svg" class="" alt="Sair do jogo"/>
+          <img src="./../assets/Imagens/cheat-off.svg" class="icon-trapaca" alt="Sair do jogo"/>
           <p>Ativar modo trapaca</p>
         </div>
       </section>
-      <section class="container-tabuleiro">
-        <img id="imagem-tabuleiro" alt="Tabuleiro 2x2"/>
-      </section>
+      <div class="container-meio">
+        <section class="container-tabuleiro">
+          <img src="./../assets/ImagensTemporarias/8x8.png" alt="Tabuleiro 8x8"/>
+        </section>
+        <section class="container-ranking">
+          <header class="ranking-header">
+            <p>Seu histórico de partidas</p>
+            <hr class="linha-horizontal">
+          </header>
+          <section class="card-ranking"> 
+            <div class="card-ranking-conteudo">
+              <div class="container-icone-nome-jogador">
+                <img src="./../assets/Imagens/trophy.svg" class="icone-trofeu" alt="Ícone troféu"/>
+                <p class="nome-jogador">Jogador123</p>
+              </div>
+              <p>Clássica 2x2</p>
+              <div class="container-tempo-data">
+                <p class="data-ranking">20/09/2022 19:00</p>
+                <div class="tempo-ranking">
+                  <img src="./../assets/Imagens/clock.svg" class="icone-relogio" alt="Ícone relógio"/>
+                  <p>3:02 minutos</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="card-ranking">
+            <div class="card-ranking-conteudo">
+              <div class="container-icone-nome-jogador">
+                <img src="./../assets/Imagens/fail.svg" class="icone-fail" alt="Ícone troféu"/>
+                <p class="nome-jogador">Jogador123</p>
+              </div>
+              <p>Contra o tempo 8x8</p>
+              <div class="container-tempo-data">
+                <p class="data-ranking">20/09/2022 19:00</p>
+                <div class="tempo-ranking">
+                  <img src="./../assets/Imagens/clock.svg" class="icone-relogio" alt="Ícone relógio"/>
+                  <p>7:43 minutos</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
     </main>
   </body>
-
-  <script src="./jogo_padrao.js"></script>
 </html>
