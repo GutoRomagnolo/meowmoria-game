@@ -1,79 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meu perfil</title>
+    <link rel="icon" href="./../assets/Imagens/favicon.png" />
+    <link rel="stylesheet" href="./../reset.css" />
+    <link rel="stylesheet" href="perfil.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8"/>
-  <title>Meu perfil</title>
-  <link rel="icon" href="./../assets/Imagens/favicon.png"/>
-  <link rel="stylesheet" href="./../reset.css"/>
-  <link rel="stylesheet" href="perfil.css"/>
-</head>
+  <body>
+    <header class="header-principal">
+      <img
+        src="./../assets/Imagens/icons-header.svg"
+        class="icon-header"
+        alt="header"
+      />
+    </header>
 
-<body>
-  <header class="header-principal">
-    <img src="./../assets/Imagens/icons-header.svg" class="icon-header" alt="header"/>
-  </header>
+    <main>
+      <section>
+        <h1>Meu perfil</h1>
+        <form>
+          <div class="formulario">
+            <div class="div-nome">
+              <label for="nome-completo">Nome completo:</label>
+              <input
+                class="input-padrao"
+                type="text"
+                id="nome-completo"
+                required
+              />
+            </div>
+            <div class="div-cpf-aniversario">
+              <div class="div-cpf">
+                <label for="cpf">CPF:</label>
+                <input
+                  class="input-padrao input-desabilitado"
+                  type="text"
+                  id="cpf"
+                  size="30"
+                  readonly
+                />
+              </div>
+              <div class="div-aniversario">
+                <label for="aniversario">Data de nascimento</label>
+                <input
+                  class="input-padrao input-desabilitado"
+                  type="date"
+                  id="aniversario"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="div-email-tel">
+              <div class="div-email">
+                <label for="email">E-mail:</label>
+                <input
+                  class="input-padrao"
+                  type="email"
+                  id="email"
+                  size="25"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  required
+                />
+              </div>
+              <div class="div-telefone">
+                <label for="telefone">Telefone:</label>
+                <input
+                  class="input-padrao"
+                  type="tel"
+                  id="telefone"
+                  size="15"
+                  required
+                />
+              </div>
+            </div>
+            <div class="usuario">
+              <div class="quadrado">
+                <img
+                  src="./../assets/Imagens/profile-picture.svg"
+                  class="avatar"
+                />
+              </div>
+              <div class="div-nome-senha">
+                <label for="apelido"></label>
+                <input
+                  class="input-padrao input-desabilitado"
+                  type="text"
+                  id="apelido"
+                  size="35"
+                  readonly
+                  placeholder="Seu apelido no jogo"
+                />
+                <label for="senha"></label>
+                <input
+                  class="input-padrao"
+                  type="password"
+                  id="senha"
+                  required
+                  placeholder="Sua senha"
+                />
+              </div>
+            </div>
+            <div class="aviso-campos">
+              Os campos que estao marcados em cinza nao podem ser alterados
+            </div>
+            <div class="botoes-acao">
+              <input
+                class="botao-padrao botao-voltar"
+                type="button"
+                value="Voltar"
+              />
+              <input
+                class="botao-padrao botao-atualizar"
+                type="submit"
+                value="Atualizar"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
 
-  <main>
-    <section>
-      <h1>Meu perfil</h1>
-      <form>
-        <div class="formulario">
-          <div class="div-nome">
-            <label for="nome-completo">Nome completo:</label>
-            <input class="input-padrao" type="text" id="nome-completo" required />
-          </div>
-          <div class="div-cpf-aniversario">
-            <div class="div-cpf">
-              <label for="cpf">CPF:</label>
-              <input class="input-padrao input-desabilitado" type="text" id="cpf" size="30" readonly />
-            </div>
-            <div class="div-aniversario">
-              <label for="aniversario">Data de nascimento</label>
-              <input class="input-padrao input-desabilitado" type="date" id="aniversario" readonly />
-            </div>
-          </div>
-          <div class="div-email-tel">
-            <div class="div-email">
-              <label for="email">E-mail:</label>
-              <input class="input-padrao" type="email" id="email" size="25" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
-            </div>
-            <div class="div-telefone">
-              <label for="telefone">Telefone:</label>
-              <input class="input-padrao" type="tel" id="telefone" size="15" required />
-            </div>
-          </div>
-          <div class="usuario">
-            <div class="quadrado">
-              <img src="./../assets/Imagens/profile-picture.svg" class="avatar" />
-            </div>
-            <div class="div-nome-senha">
-              <label for="apelido"></label>
-              <input class="input-padrao input-desabilitado" type="text" id="apelido" size="35" readonly placeholder="Seu apelido no jogo" />
-              <label for="senha"></label>
-              <input class="input-padrao" type="password" id="senha" required placeholder="Sua senha" />
-            </div>
-          </div>
-          <div class="aviso-campos">
-            Os campos que estao marcados em cinza nao podem ser alterados
-          </div>
-          <div class="botoes-acao">
-            <input class="botao-padrao botao-voltar" type="button" value="Voltar" />
-            <input class="botao-padrao botao-atualizar" type="submit" value="Atualizar" />
-          </div>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <div class="div-footer">
-      <p>Autores:</p>
-      <p>
-        Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e Thamires Prado
-      </p>
-    </div>
-  </footer>
-</body>
-
+    <footer>
+      <div class="div-footer">
+        <p>Autores:</p>
+        <p>
+          Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e
+          Thamires Prado
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
