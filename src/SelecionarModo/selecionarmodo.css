@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   font-family: "Nintendo DS BIOS", sans-serif;
   font-size: 2.5rem;
+  min-height: 100vh;
 }
 
 .header-principal {
@@ -110,12 +111,6 @@ body {
   margin-bottom: 0.625rem;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-  text-align: center;
-}
-
 .card-imagem {
   width: 11.875rem;
   height: 11.875rem;
@@ -178,4 +173,18 @@ select {
 input[value="Jogar"] {
   display: flex;
   justify-content: center;
+}
+
+footer {
+  font-family: "Nintendo DS BIOS";
+  font-size: 1.25rem;
+  color: #fffefe;
+  background-color: #000000;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: auto;
 }
