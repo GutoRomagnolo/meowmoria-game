@@ -46,15 +46,6 @@ h1 {
   text-align: center;
 }
 
-p {
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: center;
-  color: #000000;
-  margin: 20px;
-}
-
 form {
   max-width: 480px;
   font-size: 30px;
@@ -215,18 +206,15 @@ form {
 }
 
 footer {
+  font-family: "Nintendo DS BIOS";
+  font-size: 1.25rem;
+  color: #fffefe;
   background-color: #000000;
+  height: 4rem;
   width: 100%;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  left: 0; 
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   margin-top: auto;
-}
-
-footer p {
-  font-family: 'Nintendo DS BIOS';
-  font-size: 20px;
-  color: #FFFEFE;
 }
