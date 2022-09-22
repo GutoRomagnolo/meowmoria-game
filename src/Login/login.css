@@ -118,7 +118,7 @@ h1 {
   color: #fffefe;
 }
 
-.botao-entrar:hover, .botao-cadastrar:hover {
+.container-botao-entrar:hover, .botao-cadastrar:hover {
   transform: scale(1.05);
 }
 
