@@ -98,7 +98,7 @@ h1 {
   0 0.125rem 0 0 black;
 }
 
-.botao-entrar {
+.container-botao-entrar {
   display: flex;
   background: #000000;
   height: 2.125rem;
@@ -110,6 +110,12 @@ h1 {
   width: 100%;
   justify-content: center;
   transition: all 0.1s ease-in-out;
+  text-decoration: none;
+}
+
+.botao-entrar {
+  background: #000000;
+  color: #fffefe;
 }
 
 .botao-entrar:hover, .botao-cadastrar:hover {
@@ -145,10 +151,11 @@ footer {
   font-size: 1.25rem;
   color: #fffefe;
   background-color: #000000;
-  height: 3.125rem;
+  height: 4rem;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: auto;
 }
