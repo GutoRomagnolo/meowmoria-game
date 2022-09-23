@@ -20,7 +20,7 @@ body {
 .formulario {
   margin: 1.25rem 0;
   display: grid;
-  grid-template-columns: repeat(1fr 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .header-principal {
@@ -131,7 +131,7 @@ form {
 
 .quadrado {
   margin: 0.625rem 1.25rem 0.625rem 0;
-  border: 0.0.313rem solid black;
+  border: 0.0313rem solid black;
   width: 5rem;
   box-shadow: -0.125rem 0 0 0 black,
               0.125rem 0 0 0 black,
