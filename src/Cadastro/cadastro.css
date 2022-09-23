@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Nintendo DS BIOS', sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,9 +21,9 @@ body {
   display: flex;
   flex-direction: row;
   background-color: black;
-  box-shadow: -10px 0 0 0 black, 10px 0 0 0 black, 0 -10px 0 0 black, 0 10px 0 0 black;
+  box-shadow: -0.625rem 0 0 0 black, 0.625rem 0 0 0 black, 0 -0.625rem 0 0 black, 0 0.625rem 0 0 black;
   height: 2rem;
-  margin: 10px;
+  margin: 0.625rem;
   font-size: 1.875rem;
 }
 
@@ -35,23 +35,23 @@ h1 {
   font-family: '3Dventure';
   font-style: normal;
   font-weight: 500;
-  font-size: 70px;
-  line-height: 72px;
+  font-size: 4.375rem;
+  line-height: 4.5rem;
   text-align: center;
 }
 
 p {
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.375rem;
   text-align: center;
   color: #000000;
-  margin: 20px;
+  margin: 1.25rem;
 }
 
 form {
-  max-width: 480px;
-  font-size: 30px;
+  max-width: 30rem;
+  font-size: 1.875rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -59,24 +59,24 @@ form {
 }
 
 .formulario {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   display: grid;
   grid-template-columns: repeat(1fr 1fr);
 }
 
 .input-padrao {
-  height: 24px;
-  border: 1px solid black;
-  padding: 5px;
-  margin: 10px 0;
-  border-radius: 1px;
+  height: 1.5rem;
+  border: 0.063rem solid black;
+  padding: 0.313rem;
+  margin: 0.625rem 0;
+  border-radius: 0.063rem;
   outline: 0;
   font-family: 'Nintendo DS BIOS';
-  font-size: 20px;
-  box-shadow: -2px 0 0 0 black,
-              2px 0 0 0 black,
-              0 -2px 0 0 black,
-              0 2px 0 0 black;
+  font-size: 1.25rem;
+  box-shadow: -0.125rem 0 0 0 black,
+              0.125rem 0 0 0 black,
+              0 -0.125rem 0 0 black,
+              0 0.125rem 0 0 black;
 }
 
 .div-nome {
@@ -119,22 +119,22 @@ form {
 .usuario {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .quadrado {
-  margin: 10px 20px 10px 0px;
-  border: 0.5px solid black;
-  width: 80px;
-  box-shadow: -2px 0 0 0 black,
-              2px 0 0 0 black,
-              0 -2px 0 0 black,
-              0 2px 0 0 black;
+  margin: 0.625rem 1.25rem 0.625rem 0;
+  border: 0.0.313rem solid black;
+  width: 5rem;
+  box-shadow: -0.125rem 0 0 0 black,
+              0.125rem 0 0 0 black,
+              0 -0.125rem 0 0 black,
+              0 0.125rem 0 0 black;
 }
 
 .avatar {
-  width: 70px;
-  margin: 5px;
+  width: 4.375rem;
+  margin: 0.313rem;
 }
 
 .div-nome-senha {
@@ -146,8 +146,8 @@ form {
   font-family: 'Nintendo DS BIOS';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 22px;
+  font-size: 1.875rem;
+  line-height: 1.375rem;
 }
 
 .botoes-acao {
@@ -157,20 +157,20 @@ form {
 }
 
 .botao-padrao {
-  border: 1px solid black;
-  padding: 5px;
-  margin: 10px 0;
-  border-radius: 1px;
+  border: 0.063rem solid black;
+  padding: 0.313rem;
+  margin: 0.625rem 0;
+  border-radius: 0.063rem;
   box-sizing: border-box;
   outline: 0;
   text-align: center;
   font-family: 'Nintendo DS BIOS';
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #FFFEFE;
-  box-shadow: -4px 0 0 0 black,
-              4px 0 0 0 black,
-              0 -4px 0 0 black,
-              0 4px 0 0 black;
+  box-shadow: -0.25rem 0 0 0 black,
+              0.25rem 0 0 0 black,
+              0 -0.25rem 0 0 black,
+              0 0.25rem 0 0 black;
   cursor: pointer;
 }
 
@@ -181,20 +181,20 @@ form {
 .botao-voltar {
   text-decoration: none;
   color: #000;
-  box-shadow: -4px 0 0 0 black,
-              4px 0 0 0 black,
-              0 -4px 0 0 black,
-              0 4px 0 0 black;
+  box-shadow: -0.25rem 0 0 0 black,
+              0.25rem 0 0 0 black,
+              0 -0.25rem 0 0 black,
+              0 0.25rem 0 0 black;
 }
 
 .botao-cadastrar {
   text-decoration: none;
   background: #000000;
   color: #FFFEFE;
-  box-shadow: -4px 0 0 0 black,
-              4px 0 0 0 black,
-              0 -4px 0 0 black,
-              0 4px 0 0 black;
+  box-shadow: -0.25rem 0 0 0 black,
+              0.25rem 0 0 0 black,
+              0 -0.25rem 0 0 black,
+              0 0.25rem 0 0 black;
 }
 
 footer {
@@ -210,6 +210,6 @@ footer {
 
 footer p {
   font-family: 'Nintendo DS BIOS';
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #FFFEFE;
 }
