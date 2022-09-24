@@ -65,7 +65,7 @@ h1 {
   font-size: 4.375rem;
   line-height: 4.5rem;
   text-align: center;
-  padding-top: 3rem;
+  padding: 3rem 0 2.5rem 0;
 }
 
 form {
@@ -73,7 +73,6 @@ form {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 0 500;
 }
 
 input {
@@ -90,7 +89,7 @@ input {
 }
 
 .ranking-tabela {
-  max-width: 65rem;
+  max-width: 38.625rem;
   margin: 0 auto;
   border: 0.125rem solid #000000;
 }
@@ -119,25 +118,24 @@ input {
 
 .ranking-tabela__item {
   width: 100%;
-  height: 60;
   display: grid;
-  grid-template-columns: 0fr 0.5fr 1.5fr 2fr 1fr;
+  grid-template-columns: 0fr 0.5fr 2.2fr 2.2fr 1.2fr;
   align-items: center;
   border-bottom: 0.125rem solid #000;
-}
+} 
 
 .ranking-tabela__item:last-child {
     border-bottom: 0;
 }
 
 .ranking-tabela__posicao {
-  margin: 0 1.25rem;
   font-size: 1.875rem;
   text-align: center;
 }
 
 .ranking-tabela__nome-jogador {
   font-size: 1.875rem;
+  padding-left: 1rem;
 }
 
 .ranking-tabela__modo-jogo {
@@ -145,40 +143,34 @@ input {
 }
 
 .ranking-tabela__detalhes-partida {
-  margin: 0 1.25rem;
-  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0.875rem 0 0.875rem 0;
 }
 
-.ranking-tabela__data {
-  text-align: right;
-}
 
 .ranking-tabela__tempo-jogadas {
     display: flex;
     flex-direction: row;
-    justify-content: right;
-    margin: 0.25rem 0 0 0;
-}
-
-.ranking-tabela__tempo-jogadas div {
-    margin: 0.125rem 0 0 10.25rem;
+    justify-content: center;
+    padding: 0.25rem 0 0 0;
+    gap: 1rem;
 }
 
 .ranking-tabela__legenda {
     display: flex;
     justify-content: center;
-    margin: 1.25rem 0 0 0;
     font-size: 1.563rem;
+    padding-top: 1.188rem;
+    gap: 3rem;
 }
 
 .ranking-tabela__legenda-item {
   display: flex;
   align-items: center;
-  margin: 0 0.625rem;
-}
-
-.ranking-tabela__legenda-item img {
-  margin: 0 0.375rem 0 0;
+  gap: 0.5rem;
 }
 
 ::placeholder {
