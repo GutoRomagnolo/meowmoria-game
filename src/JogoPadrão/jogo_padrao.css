@@ -64,11 +64,6 @@ h1 {
   padding: 2.5rem 0 0 6rem;
 }
 
-.container-configuracoes-tabuleiro {
-  display: flex;
-  flex-direction: row;
-}
-
 .menu-lateral {
   display: flex;
   flex-direction: column;
