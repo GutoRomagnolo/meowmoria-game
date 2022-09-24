@@ -38,7 +38,7 @@ body {
   font-size: 1.875rem;
 }
 
-.header-nav {
+.nav-esquerda, .nav-direita {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,8 +46,12 @@ body {
   color: #fff;
 }
 
-.icon-android {
+.nav-esquerda {
   padding-left: 2rem;
+}
+
+.icon-android {
+  padding-right: 12rem;
 }
 
 .nav-opcao {
