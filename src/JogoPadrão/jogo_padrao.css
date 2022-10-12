@@ -30,12 +30,16 @@ h1 {
   font-size: 1.875rem;
 }
 
-.header-nav {
+.nav-direita, .nav-esquerda {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   color: #fff;
+}
+
+.nav-esquerda {
+  padding-left: 2rem;
 }
 
 .icon-android {
