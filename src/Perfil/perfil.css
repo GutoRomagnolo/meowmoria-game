@@ -30,7 +30,30 @@ body {
   box-shadow: -0.625rem 0 0 0 black, 0.625rem 0 0 0 black, 0 -0.625rem 0 0 black, 0 0.625rem 0 0 black;
   height: 2rem;
   margin: 0.625rem;
+  justify-content: space-between;
   font-size: 1.875rem;
+}
+
+.nav-opcao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding-left: 2rem;
+  text-decoration: none;
+}
+
+.header-nav-icons {
+  padding-right: 0.5rem;
+}
+
+.icon-android {
+  padding-left: 2rem;
+}
+
+.nav-opcao:hover {
+  transform: scale(1.05);
 }
 
 .icon-header {
@@ -162,9 +185,8 @@ form {
 }
 
 .botoes-acao {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .botao-padrao {
@@ -188,14 +210,6 @@ form {
 
 .botao-padrao:hover {
   transform: scale(1.05);
-}
-
-.botao-voltar {
-  color: #000;
-  box-shadow: -0.25rem 0 0 0 black,
-              0.25rem 0 0 0 black,
-              0 -0.25rem 0 0 black,
-              0 0.25rem 0 0 black;
 }
 
 .botao-atualizar {
