@@ -38,7 +38,7 @@ body {
   font-size: 1.875rem;
 }
 
-.nav-esquerda, .nav-direita {
+.nav-esquerda, .nav-direita, .nav-meio {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,10 +48,6 @@ body {
 
 .nav-esquerda {
   padding-left: 2rem;
-}
-
-.icon-android {
-  padding-right: 12rem;
 }
 
 .nav-opcao {
@@ -83,7 +79,7 @@ body {
   padding: 0 18.75rem 0 18.75rem;
 }
 
-.card-selecao {
+#card-classico, #card-tempo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,8 +100,9 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-.card-selecao:hover {
+#card-classico:hover, #card-tempo:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .card-titulo {
@@ -152,7 +149,8 @@ select {
 
 .botao {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 3.75rem;
 }
 
@@ -178,6 +176,14 @@ select {
 input[value="Jogar"] {
   display: flex;
   justify-content: center;
+}
+
+#erro {
+  display: flex;
+  font-size: 1.5rem;
+  color: red;
+  margin: 0.625rem;
+  font-weight: bold;
 }
 
 footer {

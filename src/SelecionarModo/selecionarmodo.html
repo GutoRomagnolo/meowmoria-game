@@ -7,6 +7,7 @@
     <link rel="icon" href="./../assets/Imagens/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="./selecionarmodo.css">
+    <script src="./selecionarmodo.js"></script>
   </head>
 
   <body>
@@ -21,11 +22,13 @@
           <p>Sair da conta</p>
         </a>
       </nav>
-      <!-- <img
-      src="./../assets/Imagens/android.svg"
-      class="icon-android"
-      alt="Ícone do header"
-      /> -->
+      <nav class="nav-meio">
+        <img
+        src="./../assets/Imagens/android.svg"
+        class="icon-android"
+        alt="Ícone do header"
+        />
+      </nav>
       <nav class="nav-direita">
         <a href="./../RankingGlobal/ranking_global.html" class="nav-opcao">
           <img
@@ -50,21 +53,20 @@
       <h1>Selecione o modo de jogo</h1>
 
       <div class="cards">
-        <a href="./../JogoPadrão/jogo_padrao.html" class="card-selecao">
+        <div id="card-classico" onclick="selectClassico()">
           <img
             src="./../assets/Imagens/people.svg"
             class="card-imagem"
-            alt="people-classic"
-          >
+            alt="people-classic">
           <p class="card-titulo">Classico</p>
           <p>
             O número de pontos acumulado por um jogador corresponde ao total de
             jogadas necessárias até que todo o tabuleiro tenha sido revelado
             (quanto menor, melhor).
           </p>
-        </a>
+        </div>
 
-        <a href="./../JogoPadrão/jogo_padrao.html" class="card-selecao">
+        <div id="card-tempo" onclick="selectTempo()">
           <img
             src="./../assets/Imagens/people-running.svg"
             class="card-imagem"
@@ -76,7 +78,7 @@
             descobrir todos os pares antes que o contador chegue a zero para nao
             ser derrotado!
           </p>
-        </a>
+        </div>
       </div>
 
       <div class="container-tabuleiro">
@@ -89,7 +91,8 @@
       </div>
 
       <div class="botao">
-        <input type="submit" value="Jogar" class="enviar">
+        <input type="submit" value="Jogar" class="enviar" onclick="jogar()">
+        <p id="erro" style="visibility:hidden">Por favor, selecione um modo de jogo</p>
       </div>
     </section>
 
