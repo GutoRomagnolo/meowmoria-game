@@ -188,3 +188,36 @@ h1 {
   width: 1.875rem;
   filter: invert(81%) sepia(35%) saturate(2502%) hue-rotate(357deg) brightness(99%) contrast(107%);
 }
+
+.tabuleiro {
+  display: flex;
+}
+
+.container-tabuleiro-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  grid-template-rows: repeat(2, 4fr);
+  grid-column-gap: 0.625rem;
+  grid-row-gap: 0.625rem;
+}
+
+.container-tabuleiro-4x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(4, 4fr);
+  grid-column-gap: 0.625rem;
+  grid-row-gap: 0.625rem;
+}
+
+.container-tabuleiro-8x8 {
+  display: grid;
+  grid-template-columns: repeat(8, 4fr);
+  grid-template-rows: repeat(8, 4fr);
+  grid-column-gap: 0.625rem;
+  grid-row-gap: 0.625rem;
+}
+
+.board-cell {
+  width: 6rem;
+  cursor: pointer;
+}
