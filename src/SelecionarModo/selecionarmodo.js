@@ -1,6 +1,9 @@
 const selectedStyle = `
-  border: 0.313rem dashed #07ff07;
-  box-shadow: none;
+  background-color: white;
+  filter: invert(100%);
+  box-shadow: -0.125rem 0 0 0 white, 0.125rem 0 0 0 white, 0 -0.125rem 0 0 white,
+  0 0.125rem 0 0 white;
+  border: 0.063rem solid white;
 `;
 
 var modo_jogo = '';
@@ -18,8 +21,8 @@ function selectTempo() {
 }
 
 function jogar() {
-  var tamanho = document.getElementById("seletor-tabuleiro").value;
-  localStorage.setItem("tamanho", tamanho);
+  var tamanhoTabuleiro = document.getElementById("seletor-tabuleiro").value;
+  localStorage.setItem("tamanho", tamanhoTabuleiro);
   if (modo_jogo == 'classico') {
     window.open("./../JogoPadrão/jogo_padrao.html", "_self")
   }
