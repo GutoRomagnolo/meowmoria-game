@@ -6,6 +6,7 @@
     <link rel="icon" href="./../assets/Imagens/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="jogo_padrao.css">
+    <script src="./counter_classic.js"></script>
   </head>
 
   <body>
@@ -49,7 +50,7 @@
       <section class="menu-lateral">
         <div class="tempo-de-partida">
           <h1>Tempo da partida:</h1>
-          <p class="timer">01:23:01</p>
+          <p class="timer" id = "timer">00:00</p>
         </div>
         <div class="especificacoes-jogo">
           <div class="container-modalidade">
@@ -71,7 +72,7 @@
         </div>
       </section>
       <div class="container-meio">
-        <div class="container-tabuleiro">
+        <div class="container-tabuleiro" onclick="startCounterClassic()">
           <img
             src="./../assets/ImagensTemporarias/8x8.png"
             alt="Tabuleiro 8x8"
