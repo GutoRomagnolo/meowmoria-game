@@ -1,0 +1,72 @@
+.modal-aviso-fundo {
+    width: 100vw; 
+    height: 100vh; 
+    background: rgba(255, 255, 255, 0.9); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed;
+    z-index: 9999;
+}
+
+.modal-aviso-janela {
+width: 32.5rem; 
+height: 16.5rem; 
+border: 0.25 solid #444; 
+background: #fff; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column;
+}
+
+.modal-aviso-icone {
+    width: 3rem; 
+    filter: invert(0%) sepia(0%) saturate(10%) hue-rotate(185deg) brightness(100%) contrast(102%);
+}
+
+.modal-aviso-botoes {
+display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 2rem
+}
+
+.botao-padrao {
+    border: 0.063rem solid #000;
+    padding: 0.313rem;
+    margin: 0.625rem 0;
+    border-radius: 0.063rem;
+    box-sizing: border-box;
+    outline: 0;
+    text-align: center;
+    font-family: 'Nintendo DS BIOS';
+    font-size: 1.875rem;
+    color: #000;
+    box-shadow: -0.25rem 0 0 0 white,
+                0.25rem 0 0 0 white,
+                0 -0.25rem 0 0 white,
+                0 0.25rem 0 0 white;
+    cursor: pointer;
+}
+
+.botao-padrao:hover {
+    transform: scale(1.1);
+}
+
+.botao-sair {
+    background: #FFF;
+    color: #000;
+    box-shadow: -0.25rem 0 0 0 black,
+                0.25rem 0 0 0 black,
+                0 -0.25rem 0 0 black,
+                0 0.25rem 0 0 black;
+}
+
+.botao-jogar {
+    background: #000000;
+    color: #FFFEFE;
+    box-shadow: -0.25rem 0 0 0 black,
+                0.25rem 0 0 0 black,
+                0 -0.25rem 0 0 black,
+                0 0.25rem 0 0 black;
+}
