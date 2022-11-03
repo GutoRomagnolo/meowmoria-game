@@ -122,6 +122,8 @@ h1 {
 .container-tabuleiro {
   display: flex;
   flex-direction: column;
+  background-color: #ddd;
+  padding: 2rem;
 }
 
 .container-ranking {
@@ -213,11 +215,55 @@ h1 {
   display: grid;
   grid-template-columns: repeat(8, 4fr);
   grid-template-rows: repeat(8, 4fr);
-  grid-column-gap: 0.625rem;
-  grid-row-gap: 0.625rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
 
-.board-cell {
-  width: 6rem;
+.card-place {
+  position: relative;
+  width: 5rem;
+  height: 5.5rem;
   cursor: pointer;
+  box-shadow: -0.150rem 0 0 0 black, 0.150rem 0 0 0 black, 0 -0.150rem 0 0 black,
+  0 0.150rem 0 0 black;
+  background-color: #000;
+}
+
+.card-back, .card-front {
+  cursor: pointer;
+  position: absolute;
+  transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background: #000;
+  width: 50%;
+  height: 50%;
+  padding: 1.3rem;
+  user-select: none;
+}
+
+.card-front {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg) rotateZ(50deg);
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-front-image {
+  width: 4rem;
+}
+
+
+.card-place.flipped .card-back {
+  transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.card-place.flipped .card-front {
+  transform: rotateY(0) rotateZ(0);
 }
