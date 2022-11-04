@@ -1,6 +1,7 @@
 let secondDown = 60
 let minuteDown = 4
 let interval
+let verifier = false
 
 function setTwoDigits(value) {
     if(value<10){
@@ -12,8 +13,11 @@ function setTwoDigits(value) {
 
 
 function startCountDown() {
-    interval = setInterval(countDown, 1000)
+    if(verifier == false) {
+        interval = setInterval(countDown, 1000)
     }
+    verifier = true
+}
     
 function stop() {
     clearInterval(interval)

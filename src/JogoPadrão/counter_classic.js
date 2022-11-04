@@ -1,6 +1,7 @@
 let second = 0
 let minute = 0
 let interval
+let verifier = false
 
 function setTwoDigits(value) {
     if(value<10){
@@ -11,8 +12,11 @@ function setTwoDigits(value) {
 }
 
 function startCounterClassic() {
-    interval = setInterval(counter, 1000)
+    if(verifier == false) {
+        interval = setInterval(counter, 1000)
     }
+    verifier = true
+}
     
 function stop() {
     //conectar essa funcao à condicao de vitoria quando ela for realizada
