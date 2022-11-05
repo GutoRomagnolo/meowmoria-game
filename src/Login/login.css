@@ -145,6 +145,12 @@ h1 {
   width: 85%;
 }
 
+#erroAmbos {
+  font-size: 1.7rem;
+  color: red;
+  margin: 1rem;
+}
+
 /*FOOTER*/
 footer {
   font-family: "Nintendo DS BIOS";

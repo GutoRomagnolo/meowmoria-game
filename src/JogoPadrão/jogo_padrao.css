@@ -107,10 +107,12 @@ h1 {
   align-items: center;
   font-size: 1.875rem;
   padding-top: 3rem;
+  cursor: pointer;
 }
 
 .icon-trapaca {
   width: 1.5rem;
+  cursor: pointer;
 }
 
 .container-meio {

@@ -115,6 +115,19 @@ const flipCard = (card) => {
 
 }
 
+function modoTrapaca(id)
+	{
+		if (document.getElementById(id).getAttribute("src") == "./../assets/Imagens/cheat-off.svg")
+		{
+			document.getElementById(id).setAttribute("src", "./../assets/Imagens/cheat-onn.svg");
+      flipCard();
+    }
+		else
+		{
+			document.getElementById(id).setAttribute("src", "./../assets/Imagens/cheat-off.svg");
+		}
+	}
+	
 
 
 // const flipCard = card => {

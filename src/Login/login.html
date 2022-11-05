@@ -6,6 +6,7 @@
     <link rel="icon" href="./../assets/Imagens/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="login.css">
+    <script src="./login.js"></script>
   </head>
 
   <body>
@@ -29,16 +30,18 @@
               <p>Faca login para enfrentar outros players!</p>
             </div>
             <div class="usuario-senha">
-              <input class="campo-cadastro" placeholder="Usuário">
+              <input id="usuario" class="campo-cadastro" placeholder="Usuário">
               <input
+                id="password"
                 class="campo-cadastro"
                 type="password"
                 placeholder="Senha"
               >
-              <a class="container-botao-entrar" href="./../SelecionarModo/selecionarmodo.html">
+              <a class="container-botao-entrar" onclick="validacao()">
                 Entrar no jogo
               </a>
             </div>
+            <p id="erroAmbos" style="display:none">Insira Usuário e Senha para logar!</p>
           </div>
           <div class="container-cadastro">
             <a class="botao-cadastrar" href="./../Cadastro/cadastro.html">
