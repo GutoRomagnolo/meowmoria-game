@@ -69,7 +69,7 @@ h1 {
   font-size: 4.375rem;
   line-height: 4.5rem;
   text-align: center;
-  padding: 3rem 0 2.5rem 0;
+  padding: 3rem 0 0 0;
 }
 
 form {
@@ -90,6 +90,28 @@ input {
               0.125rem 0 0 0 black,
               0 -0.125rem 0 0 black,
               0 0.125rem 0 0 black;
+}
+
+.botoes-acao {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.botao-padrao {
+  width: 18.75rem;
+  padding: 0.313rem;
+  margin: 1.25rem 0.625rem;
+  background-color:white;
+  text-align: center;
+  font-family: 'Nintendo DS BIOS';
+  font-size: 1.875rem;
+  color: black;
+  box-shadow: -0.25rem 0 0 0 black,
+              0.25rem 0 0 0 black,
+              0 -0.25rem 0 0 black,
+              0 0.25rem 0 0 black;
+  cursor: pointer;
 }
 
 .ranking-tabela {
