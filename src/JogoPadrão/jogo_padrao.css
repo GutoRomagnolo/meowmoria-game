@@ -101,12 +101,37 @@ h1 {
   padding-left: 2rem;
 }
 
+.container-contador-jogadas{
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  font-size: 1.875rem;
+}
+
+.titulo-contador{
+  padding-right: 10px;
+}
+
+.quantidade-contador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.375rem;
+  height: 2.188rem;
+  background-color: black;
+  color: white;
+  box-shadow: -0.156rem 0 0 0 black,
+  0.156rem 0 0 0 black,
+  0 -0.156rem 0 0 black,
+  0 0.156rem 0 0 black;
+}
+
 .container-modo-trapaça {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.875rem;
-  padding-top: 3rem;
+  padding-top: 30rem;
   cursor: pointer;
 }
 
