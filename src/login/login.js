@@ -5,6 +5,6 @@ function validacao(){
     if(usuario.value=="" || senha.value==""){
         document.getElementById("erroAmbos").style.display = "block";
     }else{
-        window.open("./../SelecionarModo/selecionarmodo.html");
+        window.open("./../select-mode/select_mode.html", "_self");
     }
 }

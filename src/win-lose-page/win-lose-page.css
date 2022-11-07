@@ -1,0 +1,109 @@
+.modal-aviso-fundo {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+}
+
+.modal-aviso-janela {
+  width: 32.5rem;
+  height: 16.5rem;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -0.156rem 0 0 0 black, 0.156rem 0 0 0 black, 0 -0.156rem 0 0 black,
+    0 0.156rem 0 0 black;
+  opacity: 1;
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible;
+}
+
+.modal-aviso-icone {
+  width: 3rem;
+  filter: invert(0%) sepia(0%) saturate(10%) hue-rotate(185deg) brightness(100%)
+    contrast(102%);
+}
+
+.modal-aviso-botoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+.botao-padrao {
+  border: 0.063rem solid #000;
+  padding: 0.313rem;
+  margin: 0.625rem 0;
+  border-radius: 0.063rem;
+  box-sizing: border-box;
+  outline: 0;
+  text-align: center;
+  font-family: "Nintendo DS BIOS";
+  font-size: 1.875rem;
+  color: #000;
+  box-shadow: -0.25rem 0 0 0 white, 0.25rem 0 0 0 white, 0 -0.25rem 0 0 white,
+    0 0.25rem 0 0 white;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.botao-padrao:hover {
+  transform: scale(1.05);
+}
+
+.botao-sair {
+  background: #fff;
+  color: #000;
+  box-shadow: -0.25rem 0 0 0 black, 0.25rem 0 0 0 black, 0 -0.25rem 0 0 black,
+    0 0.25rem 0 0 black;
+}
+
+.botao-jogar {
+  background: #000000;
+  color: #fffefe;
+  box-shadow: -0.25rem 0 0 0 black, 0.25rem 0 0 0 black, 0 -0.25rem 0 0 black,
+    0 0.25rem 0 0 black;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    opacity: 1;
+  }
+}

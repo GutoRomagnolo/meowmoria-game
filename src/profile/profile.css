@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Nintendo DS BIOS";
-  src: url(./../assets/Fontes/Nintendo-DS-BIOS.ttf);
+  src: url(./../assets/fonts/Nintendo-DS-BIOS.ttf);
 }
 
 @font-face {
   font-family: "3Dventure";
-  src: url(./../assets/Fontes/3Dventure.ttf);
+  src: url(./../assets/fonts/3Dventure.ttf);
 
 }
 
@@ -15,6 +15,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.formulario {
+  margin: 1.25rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .header-principal {
@@ -61,15 +67,7 @@ h1 {
   font-size: 4.375rem;
   line-height: 4.5rem;
   text-align: center;
-}
-
-section > p {
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.375rem;
-  text-align: center;
-  color: #000000;
-  margin: 1.25rem;
+  padding-top: 3rem;
 }
 
 form {
@@ -79,12 +77,6 @@ form {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-}
-
-.formulario {
-  margin: 1.25rem 0;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
 }
 
 .input-padrao {
@@ -100,6 +92,21 @@ form {
               0.125rem 0 0 0 black,
               0 -0.125rem 0 0 black,
               0 0.125rem 0 0 black;
+}
+
+.input-desabilitado {
+  background: #f2f2f2;
+  border: 0.063rem solid #999999;
+  padding: 0.313rem;
+  margin: 0.625rem 0;
+  border-radius: 0.063rem;
+  font-family: 'Nintendo DS BIOS';
+  font-size: 1.25rem;
+  outline: 0;
+  box-shadow: -0.125rem 0 0 0 #999999,
+              0.125rem 0 0 0 #999999,
+              0 -0.125rem 0 0 #999999,
+              0 0.125rem 0 0 #999999;
 }
 
 .div-nome {
@@ -173,6 +180,10 @@ form {
   line-height: 1.375rem;
 }
 
+.aviso-campos {
+  margin: 0 0 1.25rem 0;
+}
+
 .botoes-acao {
   display: flex;
   justify-content: center;
@@ -194,14 +205,14 @@ form {
               0 -0.25rem 0 0 black,
               0 0.25rem 0 0 black;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
 .botao-padrao:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.botao-cadastrar {
-  text-decoration: none;
+.botao-atualizar {
   background: #000000;
   color: #FFFEFE;
   box-shadow: -0.25rem 0 0 0 black,
@@ -211,18 +222,15 @@ form {
 }
 
 footer {
-  background-color: #000000;
-  width: 100%;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  left: 0; 
-  bottom: 0;
-  margin-top: auto;
-}
-
-footer p {
-  font-family: 'Nintendo DS BIOS';
+  font-family: "Nintendo DS BIOS";
   font-size: 1.25rem;
-  color: #FFFEFE;
+  color: #fffefe;
+  background-color: #000000;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: auto;
 }

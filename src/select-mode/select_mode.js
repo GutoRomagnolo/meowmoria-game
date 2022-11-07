@@ -6,28 +6,28 @@ const selectedStyle = `
   border: 0.063rem solid white;
 `;
 
-var modo_jogo = '';
+let game_mode = '';
 
-function selectClassico() {
+const selectStandardMode = () => {
   document.getElementById('card-classico').style.cssText = selectedStyle;
   document.getElementById('card-tempo').style = null;
-  modo_jogo = 'classico';
+  game_mode = 'standard';
 }
 
-function selectTempo() {
+const selectAgainstTimeMode = () => {
   document.getElementById('card-tempo').style.cssText = selectedStyle;
   document.getElementById('card-classico').style = null;
-  modo_jogo = 'contra_tempo';
+  game_mode = 'against_time';
 }
 
-function jogar() {
-  var tamanhoTabuleiro = document.getElementById("seletor-tabuleiro").value;
-  localStorage.setItem("tamanho", tamanhoTabuleiro);
-  if (modo_jogo == 'classico') {
-    window.open("./../JogoPadrão/jogo_padrao.html", "_self")
-  }
-  else if (modo_jogo == 'contra_tempo') {
-    window.open("./../JogoContraTempo/jogo_contra_tempo.html", "_self")
+const startGame = () => {
+  let boardSize = document.getElementById("seletor-tabuleiro").value;
+  localStorage.setItem("boardSize", boardSize);
+
+  if (game_mode == 'standard') {
+    window.open("./../standard-mode/standard_mode.html", "_self")
+  } else if (game_mode == 'against_time') {
+    window.open("./../against-time-mode/against_time_mode.html", "_self")
   }
   else {
     document.getElementById('erro').style.visibility = 'visible';
