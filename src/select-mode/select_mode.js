@@ -6,28 +6,29 @@ const selectedStyle = `
   border: 0.063rem solid white;
 `;
 
-let game_mode = '';
+let gameMode = '';
 
 const selectStandardMode = () => {
-  document.getElementById('card-classico').style.cssText = selectedStyle;
-  document.getElementById('card-tempo').style = null;
-  game_mode = 'standard';
+  document.getElementById('standard-card').style.cssText = selectedStyle;
+  document.getElementById('against-time-card').style = null;
+  gameMode = 'standard';
 }
 
 const selectAgainstTimeMode = () => {
-  document.getElementById('card-tempo').style.cssText = selectedStyle;
-  document.getElementById('card-classico').style = null;
-  game_mode = 'against_time';
+  document.getElementById('against-time-card').style.cssText = selectedStyle;
+  document.getElementById('standard-card').style = null;
+  gameMode = 'against_time';
 }
 
 const startGame = () => {
-  let boardSize = document.getElementById("seletor-tabuleiro").value;
-  localStorage.setItem("boardSize", boardSize);
+  let boardSize = document.getElementById('board-selector').value;
+  localStorage.setItem('boardSize', boardSize);
+  localStorage.setItem('gameMode', gameMode);
 
-  if (game_mode == 'standard') {
-    window.open("./../standard-mode/standard_mode.html", "_self")
-  } else if (game_mode == 'against_time') {
-    window.open("./../against-time-mode/against_time_mode.html", "_self")
+  if (gameMode == 'standard') {
+    window.open('./../standard-mode/standard_mode.html', '_self');
+  } else if (gameMode == 'against_time') {
+    window.open('./../against-time-mode/against_time_mode.html', '_self');
   }
   else {
     document.getElementById('erro').style.visibility = 'visible';

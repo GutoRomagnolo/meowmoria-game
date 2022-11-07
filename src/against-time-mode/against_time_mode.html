@@ -5,14 +5,16 @@
     <title>Jogo da memória - Modo Padrão</title>
     <link rel="icon" href="./../assets/icons/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
-    <link rel="stylesheet" href="against_time_mode.css">
+    <link rel="stylesheet" href="./../standard-mode/standard_mode.css">
+    <link rel="stylesheet" href="./../against-time-mode/against_time_mode.css">
+    <link rel="stylesheet" href="./../win-lose-page/win-lose-page.css">
     <script src="./count_down.js"></script>
   </head>
 
   <body>
-    <header class="header-principal">
-      <nav class="nav-esquerda">
-        <a href="./../select-mode/select_mode.html" class="nav-opcao">
+    <header class="main-header">
+      <nav class="left-navigation">
+        <a href="./../select-mode/select_mode.html" class="navigation-option" onclick="backToMenu()">
           <img
             src="./../assets/icons/logoff.svg"
             class="header-nav-icons"
@@ -26,8 +28,8 @@
         class="icon-android"
         alt="Ícone do header"
       >
-      <nav class="nav-direita">
-        <a href="./../global-ranking/global_ranking.html" class="nav-opcao">
+      <nav class="right-navigation">
+        <a href="./../global-ranking/global_ranking.html" class="navigation-option">
           <img
             src="./../assets/icons/ranking.svg"
             class="header-nav-icons"
@@ -35,7 +37,7 @@
           >
           <p>Ranking Global</p>
         </a>
-        <a href="./../profile/profile.html" class="nav-opcao">
+        <a href="./../profile/profile.html" class="navigation-option">
           <img
             src="./../assets/icons/user.svg"
             class="header-nav-icons"
@@ -46,60 +48,64 @@
       </nav>
     </header>
 
-    <main class="container-geral">
-      <section class="menu-lateral">
-        <div class="tempo-de-partida">
+    <main id="general-container" class="general-container">
+      <section class="lateral-menu">
+        <div class="game-time">
           <h1>Tempo da partida:</h1>
           <p class="timer" id="timer">00:00</p>
         </div>
-        <div class="especificacoes-jogo">
-          <div class="container-modalidade">
+        <div class="game-specifications">
+          <div class="game-mode-container">
             <p>Modalidade:</p>
-            <p class="campo-especificacao">Clássico</p>
+            <p class="input-specification mode-title">Contra o tempo</p>
           </div>
-          <div class="container-tamanho-tabuleiro">
+          <div class="board-size-container">
             <p>Tabuleiro:</p>
-            <p class="campo-especificacao">8x8</p>
+            <p id="board-size" class="input-specification"></p>
           </div>
         </div>
-        <div class="container-contador-jogadas">
-          <p class="titulo-contador">Jogadas feitas:</p>
-          <div class="quantidade-contador">01</div>
+        <div class="plays-counter-container">
+          <p class="counter-title">Jogadas feitas:</p>
+          <div id="moves-made" class="counter-quantity">
+          </div>
         </div>
-        <div class="container-modo-trapaça">
+        <div class="cheat-mode-container">
           <img
+            id="cheat-mode-id" onclick='activateCheatMode("cheat-mode-id")'
             src="./../assets/icons/cheat-off.svg"
-            class="icon-trapaca"
+            class="cheat-mode-icon"
             alt="Sair do jogo"
           >
-          <p>Ativar modo trapaca</p>
+          <p onclick='activateCheatMode("cheat-mode-id")'>Ativar modo trapaca</p>
         </div>
       </section>
-      <div class="container-meio">
-        <div class="container-tabuleiro" onclick="startCountDown()">
+      <div id="middle-container" class="middle-container">
+        <div class="board-container">
+          <div id="board-place" class="board-place">
+          </div>
         </div>
-        <section class="container-ranking">
+        <section class="ranking-container">
           <header class="ranking-header">
             <h1>Seu histórico de partidas</h1>
-            <hr class="linha-horizontal">
+            <hr class="horizontal-line">
           </header>
-          <div class="card-ranking">
-            <div class="card-ranking-conteudo">
-              <div class="container-icone-nome-jogador">
+          <div class="ranking-card">
+            <div class="ranking-card-content">
+              <div class="player-name-icon-container">
                 <img
                   src="./../assets/icons/trophy.svg"
-                  class="icone-trofeu"
+                  class="trophy-icon"
                   alt="Ícone troféu"
                 >
-                <p class="nome-jogador">Jogador123</p>
+                <p class="player-name">Jogador123</p>
               </div>
               <p>Clássica 2x2</p>
-              <div class="container-tempo-data">
-                <p class="data-ranking">20/09/2022 19:00</p>
-                <div class="tempo-ranking">
+              <div class="date-time-container">
+                <p class="ranking-date">20/09/2022 19:00</p>
+                <div class="ranking-time">
                   <img
                     src="./../assets/icons/clock.svg"
-                    class="icone-relogio"
+                    class="clock-icon"
                     alt="Ícone relógio"
                   >
                   <p>3:02 minutos</p>
@@ -107,23 +113,23 @@
               </div>
             </div>
           </div>
-          <div class="card-ranking">
-            <div class="card-ranking-conteudo">
-              <div class="container-icone-nome-jogador">
+          <div class="ranking-card">
+            <div class="ranking-card-content">
+              <div class="player-name-icon-container">
                 <img
                   src="./../assets/icons/fail.svg"
-                  class="icone-fail"
+                  class="defeat-icon"
                   alt="Ícone troféu"
                 >
-                <p class="nome-jogador">Jogador123</p>
+                <p class="player-name">Jogador123</p>
               </div>
               <p>Contra o tempo 8x8</p>
-              <div class="container-tempo-data">
-                <p class="data-ranking">20/09/2022 19:00</p>
-                <div class="tempo-ranking">
+              <div class="date-time-container">
+                <p class="ranking-date">20/09/2022 19:00</p>
+                <div class="ranking-time">
                   <img
                     src="./../assets/icons/clock.svg"
-                    class="icone-relogio"
+                    class="clock-icon"
                     alt="Ícone relógio"
                   >
                   <p>7:43 minutos</p>
@@ -134,5 +140,7 @@
         </section>
       </div>
     </main>
+    <script src="./../win-lose-page/win-lose-page.js"></script>
+    <script src="./../standard-mode/standard_mode.js"></script>
   </body>
 </html>

@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
 }
 
-.header-principal {
+.main-header {
   display: flex;
   flex-direction: row;
   background-color: black;
@@ -38,7 +38,7 @@ body {
   font-size: 1.875rem;
 }
 
-.nav-esquerda, .nav-direita, .nav-meio {
+.left-navigation, .right-navigation, .middle-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,11 +46,11 @@ body {
   color: #fff;
 }
 
-.nav-esquerda {
+.left-navigation {
   padding-left: 2rem;
 }
 
-.nav-opcao {
+.navigation-option {
   display: flex;
   flex-direction: row;
   padding-right: 2rem;
@@ -59,7 +59,7 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-.nav-opcao:hover {
+.navigation-option:hover {
   transform: scale(1.05);
 }
 
@@ -67,7 +67,7 @@ body {
   padding-right: 0.5rem;
 }
 
-.container-principal {
+.main-container {
   display: flex;
   flex-direction: column;
 }
@@ -79,7 +79,7 @@ body {
   padding: 0 18.75rem 0 18.75rem;
 }
 
-#card-classico, #card-tempo {
+#standard-card, #against-time-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,12 +100,12 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-#card-classico:hover, #card-tempo:hover {
+#standard-card:hover, #against-time-card:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.card-titulo {
+.card-title {
   font-family: "3Dventure";
   font-style: normal;
   font-weight: 500;
@@ -116,19 +116,19 @@ body {
   margin-bottom: 0.625rem;
 }
 
-.card-imagem {
+.image-card {
   width: 11.875rem;
   height: 11.875rem;
 }
 
-.container-tabuleiro {
+.board-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 2.5rem 0 0 0;
 }
 
-.texto-seletor {
+.selector-text {
   font-size: 2.5rem;
   padding-right: 0.75rem;
 }
@@ -147,14 +147,14 @@ select {
   padding-left: 1.25rem;
 }
 
-.botao {
+.submit-button-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 3.75rem;
 }
 
-.enviar {
+.submit {
   display: flex;
   box-sizing: border-box;
   width: 18.75rem;
@@ -169,7 +169,7 @@ select {
   transition: all 0.1s ease-in-out;
 }
 
-.enviar:hover {
+.submit:hover {
   transform: scale(1.05);
 }
 

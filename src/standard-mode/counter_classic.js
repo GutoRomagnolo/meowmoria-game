@@ -18,7 +18,7 @@ const startCounterClassic = () => {
   verifier = true;
 }
 
-const stopCounter = () => {
+const stopClassicCounter = () => {
   clearInterval(interval);
 }
 

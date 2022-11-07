@@ -1,16 +1,19 @@
-const boardContainer = document.getElementById('container-board');
-const middleContainer = document.getElementById('container-meio');
+const boardContainer = document.getElementById('board-place');
+const middleContainer = document.getElementById('middle-container');
 const flipsMadeCounter = document.getElementById('moves-made');
 const boardSizeElement = document.getElementById('board-size');
 const boardChosenSize = localStorage.getItem('boardSize');
+const gameMode = localStorage.getItem('gameMode');
 let isMatching = false;
 let notMatchedCards = null;
 let matchChance = [];
 
 const gameProgress = {
+  gameMode: gameMode,
   tableSize: 0,
   playerMatchs: 0,
-  flipsMade: 0
+  flipsMade: 0,
+  gameIsRunning: false
 }
 
 flipsMadeCounter.innerHTML = `${gameProgress.flipsMade}`
@@ -33,7 +36,7 @@ const resolveBoardSize = chosenSize => {
       backToMenu();
   }
 
-  boardContainer.classList.add(`container-tabuleiro-${chosenSize}`);
+  boardContainer.classList.add(`board-container-${chosenSize}`);
   boardSizeElement.innerHTML = `${chosenSize}`
 }
 
@@ -123,11 +126,22 @@ const generateCardsElements = () => {
 const listenCardClicks = card => {
   const blockFlipCard = !card.classList.contains('matched') && !card.classList.contains('flipped')
   card.addEventListener('click', event => {
+    if (!gameProgress.gameIsRunning) {
+      startSpecificCounter()
+    }
+
     if (blockFlipCard && !isMatching) {
       flipCards(card);
-      startCounterClassic();
     }
+
+    gameProgress.gameIsRunning = true;
   })
+}
+
+const startSpecificCounter = () => {
+  gameProgress.gameMode === 'standard'
+    ? startCounterClassic()
+    : startCountDown(boardChosenSize)
 }
 
 const flipCards = (card) => {
@@ -155,7 +169,7 @@ const flipCards = (card) => {
     setTimeout(() => {
       flipBackCards();
       isMatching = false;
-    }, 1000)
+    }, 500)
   }
 }
 
@@ -164,14 +178,6 @@ const flipBackCards = () => {
   notMatchedCards.forEach(card => {
     card.classList.remove('flipped')
   })
-}
-
-const flipCardsOnCheat = cheatState => {
-  if (cheatState === 'cheatOn') {
-    notMatchedCards.forEach(card => card.classList.add('flipped'))
-  } else {
-    notMatchedCards.forEach(card => card.classList.remove('flipped'))
-  }
 }
 
 const activateCheatMode = cheatButtonElementId => {
@@ -187,19 +193,24 @@ const activateCheatMode = cheatButtonElementId => {
   }
 }
 
-const checkPlayerMatchs = () => {
-  if (gameProgress.playerMatchs === (gameProgress.tableSize / 2)) {
-    setTimeout(() => {
-      showMatchResult('victory');
-      stopCounter();
-    }, 500)
+const flipCardsOnCheat = cheatState => {
+  if (cheatState === 'cheatOn') {
+    notMatchedCards.forEach(card => card.classList.add('flipped'))
+  } else {
+    notMatchedCards.forEach(card => card.classList.remove('flipped'))
   }
 }
 
-const hideElements = elementsToHide => {
-  elementsToHide.forEach(element => {
-    element.classList.add('hide-element');
-  })
+const checkPlayerMatchs = () => {
+  if (gameProgress.playerMatchs === (gameProgress.tableSize / 2)) {
+    setTimeout(() => {
+      showMatchResult('victory', gameProgress.gameMode);
+
+      gameProgress.gameMode === 'standard'
+        ? stopClassicCounter()
+        : stopCountDown('victory')
+    }, 500)
+  }
 }
 
 resolveBoardSize(boardChosenSize);

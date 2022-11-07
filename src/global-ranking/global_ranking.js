@@ -6,13 +6,13 @@ const selectedStyle = `
   border: 0.063rem solid white;
 `;
 
-function selectRankingClassic() {
-    document.getElementById('botao-ranking-classico').style.cssText = selectedStyle;
-    document.getElementById('botao-ranking-contratempo').style = null;
-  }
+const selectRankingClassic = () => {
+  document.getElementById('standard-ranking-button').style.cssText = selectedStyle;
+  document.getElementById('against-time-ranking-button').style = null;
+}
 
-  function selectRankingAgainstTime() {
-    document.getElementById('botao-ranking-contratempo').style = selectedStyle;
-    document.getElementById('botao-ranking-classico').style.cssText = null;
-  }
+const selectRankingAgainstTime = () => {
+  document.getElementById('against-time-ranking-button').style = selectedStyle;
+  document.getElementById('standard-ranking-button').style.cssText = null;
+}
 

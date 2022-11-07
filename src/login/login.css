@@ -15,7 +15,7 @@ body {
   flex-direction: column;
 }
 
-.header-principal {
+.main-header {
   display: flex;
   flex-direction: row;
   background-color: black;
@@ -38,22 +38,22 @@ h1 {
   text-align: center;
 }
 
-.container-geral {
+.general-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.titulo-pagina {
+.page-title {
   padding: 3rem 0 1.25rem;
 }
 
-.subtitulo-pagina {
+.page-subtitle {
   font-size: 1.875rem;
 }
 
-.formulario-cadastro {
+.sign-up-form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -61,7 +61,7 @@ h1 {
   padding-top: 2.5rem;
 }
 
-.dados {
+.user-data {
   border: 0.031rem solid black;
   box-shadow: -0.188rem 0 0 0 black, 0.188rem 0 0 0 black, 0 -0.188rem 0 0 black,
     0 0.188rem 0 0 black;
@@ -71,7 +71,7 @@ h1 {
   flex-direction: column;
 }
 
-.usuario-senha {
+.username-password-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -80,14 +80,14 @@ h1 {
   width: 100%;
 }
 
-.titulo {
+.login-title {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding-bottom: 2.5rem;
 }
 
-.campo-cadastro {
+.login-input {
   flex-direction: column;
   text-align: center;
   margin-bottom: 1rem;
@@ -98,7 +98,7 @@ h1 {
   0 0.125rem 0 0 black;
 }
 
-.container-botao-entrar {
+.login-button-container {
   display: flex;
   background: #000000;
   height: 2.125rem;
@@ -118,18 +118,18 @@ h1 {
   color: #fffefe;
 }
 
-.container-botao-entrar:hover, .botao-cadastrar:hover {
+.login-button-container:hover, .sign-up-option-button:hover {
   transform: scale(1.05);
 }
 
-.container-cadastro {
+.sign-up-option-container {
   display: flex;
   justify-content: center;
   padding: 3rem 0 3rem 0;
   width: 100%;
 }
 
-.botao-cadastrar {
+.sign-up-option-button {
   text-decoration: none;
   display: flex;
   padding: 0.500rem 0 0.500rem 0;
@@ -145,7 +145,7 @@ h1 {
   width: 85%;
 }
 
-#erroAmbos {
+#both-inputs-invalid {
   font-size: 1.7rem;
   color: red;
   margin: 1rem;

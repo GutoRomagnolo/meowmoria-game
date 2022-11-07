@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-.header-principal {
+.main-header {
   display: flex;
   flex-direction: row;
   background-color: black;
@@ -27,7 +27,7 @@ body {
   font-size: 1.875rem;
 }
 
-.nav-esquerda, .nav-direita {
+.left-navigation, .right-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,7 +35,7 @@ body {
   color: #fff;
 }
 
-.nav-esquerda {
+.left-navigation {
   padding-left: 2rem;
 }
 
@@ -43,7 +43,7 @@ body {
   padding-right: 12rem;
 }
 
-.nav-opcao {
+.navigation-option {
   padding-right: 2rem;
   display: flex;
   flex-direction: row;
@@ -54,7 +54,7 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-.nav-opcao:hover {
+.navigation-option:hover {
   transform: scale(1.05);
 }
 
@@ -92,13 +92,13 @@ input {
               0 0.125rem 0 0 black;
 }
 
-.botoes-acao {
+.action-buttons {
   display: flex;
   justify-content: center;
   
 }
 
-.botao-padrao {
+.default-button {
   width: 18.75rem;
   padding: 0.313rem;
   margin: 1.25rem 0.625rem;
@@ -114,35 +114,35 @@ input {
   cursor: pointer;
 }
 
-.ranking-tabela {
+.table-ranking {
   max-width: 38.625rem;
   margin: 0 auto;
   border: 0.125rem solid #000000;
 }
 
-.ranking-tabela__trofeu {
+.trophy-table-ranking {
   position: relative;
 }
 
-.trofeu_primeiro {
+.first-place-trophy {
   filter: invert(81%) sepia(35%) saturate(2502%) hue-rotate(357deg) brightness(99%) contrast(107%);
 }
 
-.trofeu_segundo {
+.second-place-trophy {
   filter: invert(76%) sepia(0%) saturate(2%) hue-rotate(28deg) brightness(92%) contrast(84%);
 }
 
-.trofeu_terceiro {
+.third-place-trophy {
   filter: invert(52%) sepia(32%) saturate(5828%) hue-rotate(21deg) brightness(96%) contrast(98%);
 }
 
-.ranking-tabela__trofeu img {
+.trophy-table-ranking img {
   position: absolute;
   top: -0.5rem;
   left: -2.5rem;
 }
 
-.ranking-tabela__item {
+.item-table-ranking {
   width: 100%;
   display: grid;
   grid-template-columns: 0fr 0.5fr 2.2fr 2.2fr 1.2fr;
@@ -150,25 +150,25 @@ input {
   border-bottom: 0.125rem solid #000;
 } 
 
-.ranking-tabela__item:last-child {
+.item-table-ranking:last-child {
     border-bottom: 0;
 }
 
-.ranking-tabela__posicao {
+.position-table-ranking {
   font-size: 1.875rem;
   text-align: center;
 }
 
-.ranking-tabela__nome-jogador {
+.player-name-table-ranking {
   font-size: 1.875rem;
   padding-left: 1rem;
 }
 
-.ranking-tabela__modo-jogo {
+.game-mode-table-ranking {
     font-size: 1.563rem;
 }
 
-.ranking-tabela__detalhes-partida {
+.match-details-table-ranking {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -177,7 +177,7 @@ input {
 }
 
 
-.ranking-tabela__tempo-jogadas {
+.plays-duration-table-ranking {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -185,7 +185,7 @@ input {
     gap: 1rem;
 }
 
-.ranking-tabela__legenda {
+.subtitle-table-ranking {
     display: flex;
     justify-content: center;
     font-size: 1.563rem;
@@ -193,7 +193,7 @@ input {
     gap: 3rem;
 }
 
-.ranking-tabela__legenda-item {
+.subtitle-table-ranking-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
