@@ -41,7 +41,7 @@
   grid-column-gap: 2rem;
 }
 
-.botao-padrao {
+.default-button {
   border: 0.063rem solid #000;
   padding: 0.313rem;
   margin: 0.625rem 0;
@@ -58,7 +58,7 @@
   transition: all 0.1s ease-in-out;
 }
 
-.botao-padrao:hover {
+.default-button:hover {
   transform: scale(1.05);
 }
 

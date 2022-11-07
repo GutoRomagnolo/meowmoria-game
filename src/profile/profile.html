@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <header class="header-principal">
-      <nav class="nav-esquerda">
-        <a href="./../login/login.html" class="nav-opcao">
+    <header class="main-header">
+      <nav class="left-navigation">
+        <a href="./../login/login.html" class="navigation-option">
           <img
             src="./../assets/icons/logoff.svg"
             class="header-nav-icons"
@@ -31,42 +31,42 @@
       <section>
         <h1>Meu perfil</h1>
         <form>
-          <div class="formulario">
-            <div class="div-nome">
-              <label for="nome-completo">Nome completo:</label>
+          <div class="profile-form">
+            <div class="name-container">
+              <label for="user-full-name">Nome completo:</label>
               <input
-                class="input-padrao"
+                class="default-input"
                 type="text"
-                id="nome-completo"
+                id="user-full-name"
                 required
               >
             </div>
-            <div class="div-cpf-aniversario">
-              <div class="div-cpf">
+            <div class="document-birthday-container">
+              <div class="document-container">
                 <label for="cpf">CPF:</label>
                 <input
-                  class="input-padrao input-desabilitado"
+                  class="default-input disabled-input"
                   type="text"
                   id="cpf"
                   size="30"
                   readonly
                 >
               </div>
-              <div class="div-aniversario">
-                <label for="aniversario">Data de nascimento</label>
+              <div class="birthday-container">
+                <label for="birthday">Data de nascimento</label>
                 <input
-                  class="input-padrao input-desabilitado"
+                  class="default-input disabled-input"
                   type="date"
-                  id="aniversario"
+                  id="birthday"
                   readonly
                 >
               </div>
             </div>
-            <div class="div-email-tel">
-              <div class="div-email">
+            <div class="phone-email-container">
+              <div class="email-container">
                 <label for="email">E-mail:</label>
                 <input
-                  class="input-padrao"
+                  class="default-input"
                   type="email"
                   id="email"
                   size="25"
@@ -74,50 +74,50 @@
                   required
                 >
               </div>
-              <div class="div-telefone">
-                <label for="telefone">Telefone:</label>
+              <div class="phone-container">
+                <label for="phone">Telefone:</label>
                 <input
-                  class="input-padrao"
+                  class="default-input"
                   type="tel"
-                  id="telefone"
+                  id="phone"
                   size="15"
                   required
                 >
               </div>
             </div>
-            <div class="usuario">
-              <div class="quadrado">
+            <div class="userName">
+              <div class="square-picture">
                 <img
                   src="./../assets/icons/profile-picture.svg"
                   class="avatar"
                   alt="Imagem de perfil"
                 >
               </div>
-              <div class="div-nome-senha">
-                <label for="apelido"></label>
+              <div class="name-password-container">
+                <label for="nickname"></label>
                 <input
-                  class="input-padrao input-desabilitado"
+                  class="default-input disabled-input"
                   type="text"
-                  id="apelido"
+                  id="nickname"
                   size="35"
                   readonly
                   placeholder="Seu apelido no jogo"
                 >
-                <label for="senha"></label>
+                <label for="password"></label>
                 <input
-                  class="input-padrao"
+                  class="default-input"
                   type="password"
-                  id="senha"
+                  id="password"
                   required
                   placeholder="Sua senha"
                 >
               </div>
             </div>
-            <div class="aviso-campos">
+            <div class="input-alerts">
               Os campos que estao marcados em cinza nao podem ser alterados
             </div>
-            <div class="botoes-acao">
-              <button class="botao-padrao botao-atualizar" type="submit">
+            <div class="action-buttons">
+              <button class="default-button update-button" type="submit">
                 Atualizar
               </button>
             </div>

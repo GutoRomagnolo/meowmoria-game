@@ -19,7 +19,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-.header-principal {
+.main-header {
   display: flex;
   flex-direction: row;
   background-color: black;
@@ -30,7 +30,7 @@ h1 {
   font-size: 1.875rem;
 }
 
-.nav-direita, .nav-esquerda {
+.right-navigation, .left-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,7 +38,7 @@ h1 {
   color: #fff;
 }
 
-.nav-esquerda {
+.left-navigation {
   padding-left: 2rem;
 }
 
@@ -46,7 +46,7 @@ h1 {
   padding-left: 2rem;
 }
 
-.nav-opcao {
+.navigation-option {
   display: flex;
   flex-direction: row;
   padding-right: 2rem;
@@ -55,7 +55,7 @@ h1 {
   transition: all 0.1s ease-in-out;
 }
 
-.nav-opcao:hover {
+.navigation-option:hover {
   transform: scale(1.05);
 }
 
@@ -63,22 +63,23 @@ h1 {
   padding-right: 0.5rem;
 }
 
-.container-geral {
+.general-container {
   display: flex;
   padding: 2.5rem 0 0 6rem;
 }
 
-.menu-lateral {
+.lateral-menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   cursor: default;
 }
 
-.tempo-de-partida {
+.game-time {
   text-align: center;
 }
 
-.campo-especificacao {
+.input-specification {
   text-align: center;
   font-size: 2.188rem;
   box-shadow: -0.156rem 0 0 0 black,
@@ -91,28 +92,28 @@ h1 {
   font-size: 4.375rem;
 }
 
-.especificacoes-jogo {
+.game-specifications {
   display: flex;
   padding-top: 3rem;
   font-size: 1.875rem;
 }
 
-.container-tamanho-tabuleiro {
+.board-size-container {
   padding-left: 2rem;
 }
 
-.container-contador-jogadas{
+.plays-counter-container{
   display: flex;
   align-items: center;
   padding-top: 3rem;
   font-size: 1.875rem;
 }
 
-.titulo-contador{
+.counter-title{
   padding-right: 10px;
 }
 
-.quantidade-contador{
+.counter-quantity{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,28 +127,28 @@ h1 {
   0 0.156rem 0 0 black;
 }
 
-.container-modo-trapaça {
+.cheat-mode-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-size: 1.875rem;
   padding-top: 5rem;
   cursor: pointer;
 }
 
-.icon-trapaca {
+.cheat-mode-icon {
   width: 1.5rem;
+  padding-right: 1rem;
   cursor: pointer;
 }
 
-.container-meio {
+.middle-container {
   padding-left: 15rem;
   width: 54rem;
   display: flex;
   flex-direction: column;
 }
 
-.container-tabuleiro {
+.board-container {
   display: flex;
   flex-direction: column;
   background-color: #ddd;
@@ -159,7 +160,7 @@ h1 {
   align-items: center;
 }
 
-.container-ranking {
+.ranking-container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -172,17 +173,17 @@ h1 {
   padding: 1.875rem 0 1.875rem 0;
 }
 
-.linha-horizontal {
+.horizontal-line {
   background-color: #000;
   height: 0.125rem;
   margin: 0;
 }
 
-.card-ranking {
+.ranking-card {
   padding-bottom: 1rem;
 }
 
-.card-ranking-conteudo {
+.ranking-card-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,32 +195,32 @@ h1 {
   0 0.156rem 0 0 black;
 }
 
-.container-icone-nome-jogador {
+.player-name-icon-container {
   display: flex;
   align-items: center;
 }
 
-.icone-fail {
+.defeat-icon {
   width: 1.458rem;
 }
 
-.nome-jogador {
+.player-name {
   padding-left: 0.5rem;
 }
 
-.container-tempo-data {
+.date-time-container {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
 }
 
-.tempo-ranking {
+.ranking-time {
   display: flex;
   justify-content: space-between;
   padding-top: 0.438rem;
 }
 
-.icone-trofeu {
+.trophy-icon {
   width: 1.875rem;
   filter: invert(81%) sepia(35%) saturate(2502%) hue-rotate(357deg) brightness(99%) contrast(107%);
 }
@@ -228,7 +229,7 @@ h1 {
   display: flex;
 }
 
-.container-tabuleiro-4x4 {
+.board-container-4x4 {
   display: grid;
   grid-template-columns: repeat(4, 4fr);
   grid-template-rows: repeat(4, 4fr);
@@ -236,7 +237,7 @@ h1 {
   grid-row-gap: 0.625rem;
 }
 
-.container-tabuleiro-6x6 {
+.board-container-6x6 {
   display: grid;
   grid-template-columns: repeat(6, 4fr);
   grid-template-rows: repeat(6, 4fr);
@@ -244,7 +245,7 @@ h1 {
   grid-row-gap: 0.625rem;
 }
 
-.container-tabuleiro-8x8 {
+.board-container-8x8 {
   display: grid;
   grid-template-columns: repeat(8, 4fr);
   grid-template-rows: repeat(8, 4fr);
@@ -299,8 +300,4 @@ h1 {
 
 .card-place.flipped .card-front {
   transform: rotateY(0) rotateZ(0);
-}
-
-.hide-element {
-  display: none;
 }

@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <header class="header-principal">
-      <nav class="nav-esquerda">
-        <a href="./../login/login.html" class="nav-opcao">
+    <header class="main-header">
+      <nav class="left-navigation">
+        <a href="./../login/login.html" class="navigation-option">
           <img
             src="./../assets/icons/logoff.svg"
             class="header-nav-icons"
@@ -22,15 +22,15 @@
           <p>Sair da conta</p>
         </a>
       </nav>
-      <nav class="nav-meio">
+      <nav class="middle-navigation">
         <img
         src="./../assets/icons/android.svg"
         class="icon-android"
         alt="Ícone do header"
         />
       </nav>
-      <nav class="nav-direita">
-        <a href="./../global-ranking/global_ranking.html" class="nav-opcao">
+      <nav class="right-navigation">
+        <a href="./../global-ranking/global_ranking.html" class="navigation-option">
           <img
             src="./../assets/icons/ranking.svg"
             class="header-nav-icons"
@@ -38,7 +38,7 @@
           >
           <p>Ranking Global</p>
         </a>
-        <a href="./../profile/profile.html" class="nav-opcao">
+        <a href="./../profile/profile.html" class="navigation-option">
           <img
             src="./../assets/icons/user.svg"
             class="header-nav-icons"
@@ -49,16 +49,16 @@
       </nav>
     </header>
 
-    <section class="container-principal">
+    <section class="main-container">
       <h1>Selecione o modo de jogo</h1>
 
       <div class="cards">
-        <div id="card-classico" onclick="selectStandardMode()">
+        <div id="standard-card" onclick="selectStandardMode()">
           <img
             src="./../assets/icons/people.svg"
-            class="card-imagem"
-            alt="people-classic">
-          <p class="card-titulo">Classico</p>
+            class="image-card"
+            alt="standard-people">
+          <p class="card-title">Classico</p>
           <p>
             O número de pontos acumulado por um jogador corresponde ao total de
             jogadas necessárias até que todo o tabuleiro tenha sido revelado
@@ -66,13 +66,13 @@
           </p>
         </div>
 
-        <div id="card-tempo" onclick="selectAgainstTimeMode()">
+        <div id="against-time-card" onclick="selectAgainstTimeMode()">
           <img
             src="./../assets/icons/people-running.svg"
-            class="card-imagem"
-            alt="people-timemode"
+            class="image-card"
+            alt="against-time-people"
           >
-          <p class="card-titulo">Contra o tempo</p>
+          <p class="card-title">Contra o tempo</p>
           <p>
             Muito similar ao clássico, com a adicao de um contador. você deve
             descobrir todos os pares antes que o contador chegue a zero para nao
@@ -81,17 +81,17 @@
         </div>
       </div>
 
-      <div class="container-tabuleiro">
-        <p class="texto-seletor">Tamanho do Tabuleiro:</p>
-        <select id="seletor-tabuleiro">
+      <div class="board-container">
+        <p class="selector-text">Tamanho do Tabuleiro:</p>
+        <select id="board-selector">
           <option value="4x4">4x4</option>
           <option value="6x6">6x6</option>
           <option value="8x8">8x8</option>
         </select>
       </div>
 
-      <div class="botao">
-        <input type="submit" value="Jogar" class="enviar" onclick="startGame()">
+      <div class="submit-button-container">
+        <input type="submit" value="Jogar" class="submit" onclick="startGame()">
         <p id="erro" style="visibility:hidden">Por favor, selecione um modo de jogo</p>
       </div>
     </section>

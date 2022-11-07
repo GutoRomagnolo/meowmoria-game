@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <header class="header-principal">
-      <nav class="nav-esquerda">
-        <a href="./../login/login.html" class="nav-opcao">
+    <header class="main-header">
+      <nav class="left-navigation">
+        <a href="./../login/login.html" class="navigation-option">
           <img
             src="./../assets/icons/logoff.svg"
             class="header-nav-icons"
@@ -22,8 +22,8 @@
           <p>Voltar</p>
         </a>
       </nav>
-      <nav class="nav-direita">
-        <a href="./../global-ranking/global_ranking.html" class="nav-opcao">
+      <nav class="right-navigation">
+        <a href="./../global-ranking/global_ranking.html" class="navigation-option">
           <img
             src="./../assets/icons/ranking.svg"
             class="header-nav-icons"
@@ -31,7 +31,7 @@
           >
           <p>Ranking Global</p>
         </a>
-        <a href="./../profile/profile.html" class="nav-opcao">
+        <a href="./../profile/profile.html" class="navigation-option">
           <img
             src="./../assets/icons/user.svg"
             class="header-nav-icons"
@@ -45,29 +45,29 @@
     <main>
       <section>
         <h1>RANKING GLOBAL</h1>
-
-        <div class="botoes-acao">
-          <button class="botao-padrao" id="botao-ranking-classico" type="submit" onclick="selectRankingClassic()">
+        <div class="action-buttons">
+          <button class="default-button" 
+            id="standard-ranking-button" 
+            type="submit" 
+            onclick="selectRankingClassic()"
+          >
             Clássico
           </button>
-
-          <button class="botao-padrao" id="botao-ranking-contratempo" type="submit" onclick="selectRankingAgainstTime()">
+          <button class="default-button" id="against-time-ranking-button" type="submit" onclick="selectRankingAgainstTime()">
             Contra o Tempo
           </button>
-
         </div>
-
-        <div class="ranking-tabela">
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu">
-              <img class="trofeu_primeiro" src="../assets/icons/trophy.svg" alt="Troféu Primeiro Lugar">
+        <div class="table-ranking">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking">
+              <img class="first-place-trophy" src="../assets/icons/trophy.svg" alt="Troféu Primeiro Lugar">
             </div>
-            <div class="ranking-tabela__posicao">1</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 1</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 2x2</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">01/01/2022 11:11</div>
-              <div class="ranking-tabela__tempo-jogadas">
+            <div class="position-table-ranking">1</div>
+            <div class="player-name-table-ranking">Jogador 1</div>
+            <div class="game-mode-table-ranking">Clássico 2x2</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">01/01/2022 11:11</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 1:11
                 </div>
@@ -77,16 +77,16 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu">
-              <img class="trofeu_segundo" src="../assets/icons/trophy.svg" alt="Troféu Segundo Lugar">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking">
+              <img class="second-place-trophy" src="../assets/icons/trophy.svg" alt="Troféu Segundo Lugar">
             </div>
-            <div class="ranking-tabela__posicao">2</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 2</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+            <div class="position-table-ranking">2</div>
+            <div class="player-name-table-ranking">Jogador 2</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -96,16 +96,16 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu">
-              <img class="trofeu_terceiro" src="../assets/icons/trophy.svg" alt="Troféu Terceiro Lugar">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking">
+              <img class="third-place-trophy" src="../assets/icons/trophy.svg" alt="Troféu Terceiro Lugar">
             </div>
-            <div class="ranking-tabela__posicao">3</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 3</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+            <div class="position-table-ranking">3</div>
+            <div class="player-name-table-ranking">Jogador 3</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -115,14 +115,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">4</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 4</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">4</div>
+            <div class="player-name-table-ranking">Jogador 4</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -132,14 +132,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">5</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 5</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">5</div>
+            <div class="player-name-table-ranking">Jogador 5</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -149,14 +149,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">6</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 6</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">6</div>
+            <div class="player-name-table-ranking">Jogador 6</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -166,14 +166,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">7</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 7</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">7</div>
+            <div class="player-name-table-ranking">Jogador 7</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -183,14 +183,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">8</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 8</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">8</div>
+            <div class="player-name-table-ranking">Jogador 8</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -200,14 +200,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">9</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 9</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">9</div>
+            <div class="player-name-table-ranking">Jogador 9</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -217,14 +217,14 @@
               </div>
             </div>
           </div>
-          <div class="ranking-tabela__item">
-            <div class="ranking-tabela__trofeu"></div>
-            <div class="ranking-tabela__posicao">10</div>
-            <div class="ranking-tabela__nome-jogador">Jogador 10</div>
-            <div class="ranking-tabela__modo-jogo">Clássico 3x3</div>
-            <div class="ranking-tabela__detalhes-partida">
-              <div class="ranking-tabela__data">02/02/2022 22:22</div>
-              <div class="ranking-tabela__tempo-jogadas">
+          <div class="item-table-ranking">
+            <div class="trophy-table-ranking"></div>
+            <div class="position-table-ranking">10</div>
+            <div class="player-name-table-ranking">Jogador 10</div>
+            <div class="game-mode-table-ranking">Clássico 3x3</div>
+            <div class="match-details-table-ranking">
+              <div class="date-table-ranking">02/02/2022 22:22</div>
+              <div class="plays-duration-table-ranking">
                 <div>
                   <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> 2:22
                 </div>
@@ -235,12 +235,12 @@
             </div>
           </div>
         </div>
-        <div class="ranking-tabela__legenda">
-          <div class="ranking-tabela__legenda-item">
+        <div class="subtitle-table-ranking">
+          <div class="subtitle-table-ranking-item">
             <img src="../assets/icons/clock.svg" height="18" alt="Tempo da partida"> tempo da
             partida
           </div>
-          <div class="ranking-tabela__legenda-item">
+          <div class="subtitle-table-ranking-item">
             <img src="../assets/icons/play.svg" height="18" alt="Número de jogadas"> número de
             jogadas
           </div>
