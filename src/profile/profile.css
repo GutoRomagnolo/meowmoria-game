@@ -1,11 +1,13 @@
 @font-face {
   font-family: "Nintendo DS BIOS";
   src: url(./../assets/fonts/Nintendo-DS-BIOS.ttf);
+  src: url(./../assets/fonts/Nintendo\ DS\ BIOS\ Regular.woff2)
 }
 
 @font-face {
   font-family: "3Dventure";
   src: url(./../assets/fonts/3Dventure.ttf);
+  src: url(./../assets/fonts/3Dventure.woff2)
 
 }
 
@@ -46,6 +48,11 @@ body {
 
 .header-nav-icons {
   padding-right: 0.5rem;
+}
+
+.logoff-icon {
+  padding-left: 0.5rem;
+  transform: scaleX(-1);
 }
 
 .icon-android {
