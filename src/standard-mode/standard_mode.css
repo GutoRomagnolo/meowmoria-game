@@ -177,6 +177,7 @@ h1 {
   0 -0.156rem 0 0 black,
   0 0.156rem 0 0 black;
   align-items: center;
+  justify-content: center;
 }
 
 .ranking-container {

@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  z-index: 2;}
+  position: absolute;
+  z-index: 2;
+}
 
 .modal-aviso-janela {
   width: 32.5rem;
