@@ -2,7 +2,6 @@ let gameModeToRematch = null;
 let resultInformations = null;
 
 const showMatchResult = (result, gameMode) => {
-  console.log('result', result)
   gameModeToRematch = gameMode;
   const resultMapper = {
     defeat: {
@@ -14,8 +13,8 @@ const showMatchResult = (result, gameMode) => {
       image: "../assets/icons/trophy.svg",
       message: "Parabéns, você ganhou!",
       standardRematchUrl: "./../standard-mode/standard_mode.html",
-      againstTimeRematchUrl: "./../against-time-mode/against_time_mode.html",
-    },
+      againstTimeRematchUrl: "./../against-time-mode/against_time_mode.html"
+    }
   };
 
   resultInformations = resultMapper[result];

@@ -124,13 +124,12 @@ const generateCardsElements = () => {
 }
 
 const listenCardClicks = card => {
-  const blockFlipCard = !card.classList.contains('matched') && !card.classList.contains('flipped')
   card.addEventListener('click', event => {
     if (!gameProgress.gameIsRunning) {
       startSpecificCounter()
     }
 
-    if (blockFlipCard && !isMatching) {
+    if (!card.classList.contains('matched') && !card.classList.contains('flipped') && !isMatching) {
       flipCards(card);
     }
 
