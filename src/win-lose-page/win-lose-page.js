@@ -42,7 +42,11 @@ const closeMatchResult = () => {
 }
 
 const startRematch = () => {
-  gameModeToRematch === 'standard'
+  if (gameModeToRematch === 'standard') {
+    result === 'victory'
     ? window.open(resultInformations.standardRematchUrl, "_self")
     : window.open(resultInformations.againstTimeRematchUrl, "_self")
+  } else {
+    window.open(resultInformations.rematchUrl, "_self")
+  }
 }
