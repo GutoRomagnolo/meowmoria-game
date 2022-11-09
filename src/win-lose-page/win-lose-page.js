@@ -1,19 +1,19 @@
 let gameModeToRematch = null;
 let resultInformations = null;
+const standardRematchUrl = "./../standard-mode/standard_mode.html"
+const againstTimeRematchUrl = "./../against-time-mode/against_time_mode.html"
 
 const showMatchResult = (result, gameMode) => {
   gameModeToRematch = gameMode;
+
   const resultMapper = {
     defeat: {
       image: "../assets/icons/fail.svg",
-      message: "Ops, nao foi dessa vez!",
-      rematchUrl: "./../against-time-mode/against_time_mode.html"
+      message: "Ops, nao foi dessa vez!"
     },
     victory: {
       image: "../assets/icons/trophy.svg",
-      message: "Parabéns, você ganhou!",
-      standardRematchUrl: "./../standard-mode/standard_mode.html",
-      againstTimeRematchUrl: "./../against-time-mode/against_time_mode.html"
+      message: "Parabéns, você ganhou!"
     }
   };
 
@@ -42,11 +42,7 @@ const closeMatchResult = () => {
 }
 
 const startRematch = () => {
-  if (gameModeToRematch === 'standard') {
-    result === 'victory'
-    ? window.open(resultInformations.standardRematchUrl, "_self")
-    : window.open(resultInformations.againstTimeRematchUrl, "_self")
-  } else {
-    window.open(resultInformations.rematchUrl, "_self")
-  }
+  gameModeToRematch === 'standard'
+    ? window.open(standardRematchUrl, "_self")
+    : window.open(againstTimeRematchUrl, "_self")
 }
