@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <title>Jogo da memória - Modo Padrão</title>
+    <title>Jogo da memória - Contra o tempo</title>
     <link rel="icon" href="./../assets/icons/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="./../standard-mode/standard_mode.css">
@@ -65,13 +65,15 @@
           </div>
         </div>
         <div class="cheat-mode-container">
-          <img
-            id="cheat-mode-id" onclick='activateCheatMode("cheat-mode-id")'
-            src="./../assets/icons/cheat-off.svg"
-            class="cheat-mode-icon"
-            alt="Sair do jogo"
-          >
-          <p onclick='activateCheatMode("cheat-mode-id")'>Ativar modo trapaca</p>
+          <div class="cheat-button">
+            <img
+              id="cheat-mode-id" onclick='activateCheatMode("cheat-mode-id")'
+              src="./../assets/icons/cheat-off.svg"
+              class="cheat-mode-icon"
+              alt="Sair do jogo"
+            >
+            <p onclick='activateCheatMode("cheat-mode-id")'>Ativar modo trapaca</p>
+          </div>
         </div>
       </section>
       <div id="middle-container" class="middle-container">

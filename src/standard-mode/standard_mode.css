@@ -136,16 +136,28 @@ h1 {
 
 .cheat-mode-container {
   display: flex;
-  align-items: center;
   font-size: 1.875rem;
   padding-top: 5rem;
-  cursor: pointer;
 }
 
 .cheat-mode-icon {
   width: 1.5rem;
+  padding-left: 0.5rem;
   padding-right: 1rem;
   cursor: pointer;
+}
+
+.cheat-button {
+  display: flex;
+  align-items: center;
+  border-color: #000;
+  box-shadow: -0.156rem 0 0 0 black,
+  0.156rem 0 0 0 black,
+  0 -0.156rem 0 0 black,
+  0 0.156rem 0 0 black;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  width: 18rem;
 }
 
 .middle-container {
@@ -158,7 +170,7 @@ h1 {
 .board-container {
   display: flex;
   flex-direction: column;
-  background-color: #ddd;
+  background: rgba(221, 221, 221);
   padding: 2rem;
   box-shadow: -0.156rem 0 0 0 black,
   0.156rem 0 0 0 black,

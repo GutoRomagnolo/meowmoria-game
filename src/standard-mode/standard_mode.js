@@ -186,9 +186,11 @@ const activateCheatMode = cheatButtonElementId => {
   if (document.getElementById(cheatButtonElementId).getAttribute('src') === cheatsOffURL) {
     document.getElementById(cheatButtonElementId).setAttribute('src', cheatsONUrl);
     flipCardsOnCheat('cheatOn');
+    document.getElementById("cheat-mode-text").innerHTML = "Desativar modo trapaca";
   } else {
     document.getElementById(cheatButtonElementId).setAttribute('src', cheatsOffURL);
     flipCardsOnCheat('cheatOff');
+    document.getElementById("cheat-mode-text").innerHTML = "Ativar modo trapaca";
   }
 }
 

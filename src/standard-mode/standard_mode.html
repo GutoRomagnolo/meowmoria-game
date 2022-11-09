@@ -63,17 +63,19 @@
           </div>
         </div>
         <div class="cheat-mode-container">
-          <img
-            id="cheat-mode-id" onclick='activateCheatMode("cheat-mode-id")'
-            src="./../assets/icons/cheat-off.svg"
-            class="cheat-mode-icon"
-            alt="Sair do jogo"
-          >
-          <p onclick='activateCheatMode("cheat-mode-id")'>Ativar modo trapaca</p>
+          <div class="cheat-button" onclick='activateCheatMode("cheat-mode-id")'>
+            <img
+              id="cheat-mode-id"
+              src="./../assets/icons/cheat-off.svg"
+              class="cheat-mode-icon"
+              alt="Sair do jogo"
+            >
+            <p id="cheat-mode-text">Ativar modo trapaca</p>
+          </div>
         </div>
       </section>
       <div id="middle-container" class="middle-container">
-        <div class="board-container">
+        <div class="board-container" id="board-container">
           <div id="board-place" class="board-place">
           </div>
         </div>

@@ -19,17 +19,20 @@ const showMatchResult = (result, gameMode) => {
 
   resultInformations = resultMapper[result];
 
-  document.body.innerHTML += `
-    <div class="modal-aviso-fundo">
-      <div class="modal-aviso-janela">
-        <img src="${resultInformations.image}" alt="${resultInformations.message}" class="modal-aviso-icone">
-        <div style="margin: 1rem 0;">${resultInformations.message}</div>
-        <div class="modal-aviso-botoes">
-        <input class="default-button botao-sair" type="submit" value="Sair" onclick="closeMatchResult()">
-        <input class="default-button botao-jogar" type="submit" value="Jogar novamente" onclick="startRematch()">
+
+  document.getElementById("board-container").style.background = "rgba(221, 221, 221, 0.7)";
+  document.getElementById("board-place").style.opacity = "0.3";
+  document.getElementById("board-container").innerHTML += `
+      <div class="modal-aviso-fundo">
+        <div class="modal-aviso-janela">
+          <img src="${resultInformations.image}" alt="${resultInformations.message}" class="modal-aviso-icone">
+          <div style="margin: 1rem 0;">${resultInformations.message}</div>
+          <div class="modal-aviso-botoes">
+          <input class="default-button botao-sair" type="submit" value="Trocar modo de jogo" onclick="closeMatchResult()">
+          <input class="default-button botao-jogar" type="submit" value="Jogar novamente" onclick="startRematch()">
+          </div>
         </div>
       </div>
-    </div>
     `;
 }
 
