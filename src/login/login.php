@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="icon" href="./../assets/icons/favicon.png">
-    <link rel="stylesheet" href="./../reset.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="./login.js"></script>
-  </head>
+<?php
+  require "../componentes/header.php";
+?>
 
   <body>
     <header class="main-header">
@@ -52,12 +45,6 @@
       </section>
     </main>
 
-    <footer>
-        <p>Autores:</p>
-        <p>
-          Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e
-          Thamires Prado
-        </p>
-    </footer>
-  </body>
-</html>
+<?php
+  require "../componentes/footer.php";
+?>

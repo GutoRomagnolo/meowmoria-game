@@ -29,7 +29,7 @@
           Insira seus dados abaixo para criar sua<br>
           conta e comecar a jogar.
         </p>
-        <form>
+        <form action="sign_up.php" method="POST">
           <div class="sign-up-form">
             <div class="name-container">
               <label for="user-full-name">Nome completo:</label>
@@ -37,6 +37,7 @@
                 class="default-input"
                 type="text"
                 id="user-full-name"
+                name="user_full_name"
                 required
               >
             </div>
@@ -47,6 +48,7 @@
                   class="default-input"
                   type="text"
                   id="cpf"
+                  name="cpf"
                   size="30"
                   required
                 >
@@ -57,6 +59,7 @@
                   class="default-input"
                   type="date"
                   id="birthday"
+                  name="birthday"
                   required
                 >
               </div>
@@ -68,6 +71,7 @@
                   class="default-input"
                   type="email"
                   id="email"
+                  name="email"
                   size="25"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   required
@@ -79,6 +83,7 @@
                   class="default-input"
                   type="tel"
                   id="phone"
+                  name="phone"
                   size="15"
                   required
                 >
@@ -98,6 +103,7 @@
                   class="default-input"
                   type="text"
                   id="nickname"
+                  name="nickname"
                   size="35"
                   required
                   placeholder="Seu apelido no jogo"
@@ -107,6 +113,7 @@
                   class="default-input"
                   type="password"
                   id="password"
+                  name="user_password"
                   required
                   placeholder="Sua senha"
                 >
@@ -117,6 +124,7 @@
                 class="default-button sign-up-option-button"
                 type="submit"
                 value="Quero me cadastrar"
+                
               >
             </div>
           </div>
