@@ -1,6 +1,13 @@
-<?php
-  require "../componentes/header.php";
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="icon" href="./../assets/icons/favicon.png">
+    <link rel="stylesheet" href="./../reset.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="./login.js"></script>
+  </head>
 
   <body>
     <header class="main-header">
@@ -10,7 +17,6 @@
         alt="header"
       >
     </header>
-
     <main>
       <section class="general-container">
         <h1 class="page-title">MEOWMORIA</h1>
@@ -44,7 +50,6 @@
         </form>
       </section>
     </main>
-
-<?php
-  require "../componentes/footer.php";
-?>
+    <?php require "../components/footer.php" ?>
+  </body>
+</html>

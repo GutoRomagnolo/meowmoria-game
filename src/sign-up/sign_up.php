@@ -1,33 +1,131 @@
-<?php
-session_start();
-include("database.php");
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="icon" href="./../assets/icons/favicon.png">
+    <link rel="stylesheet" href="./../reset.css">
+    <link rel="stylesheet" href="sign_up.css">
+  </head>
 
-$user_full_name = mysqli_real_escape_string($dbConnection, ($_POST['user_full_name']));
-$cpf = mysqli_real_escape_string($dbConnection, ($_POST['cpf']));
-$birthday = mysqli_real_escape_string($dbConnection, ($_POST['birthday']));
-$email = mysqli_real_escape_string($dbConnection, ($_POST['email']));
-$phone = mysqli_real_escape_string($dbConnection, ($_POST['phone']));
-$nickname = mysqli_real_escape_string($dbConnection, ($_POST['nickname']));
-$password = mysqli_real_escape_string($dbConnection, ($_POST['user_password']));
+  <body>
+    <?php require "../components/back_header.php" ?>
+    <main>
+      <section>
+        <h1>Cadastro</h1>
+        <p>
+          Insira seus dados abaixo para criar sua<br>
+          conta e comecar a jogar.
+        </p>
+        <form action="sign_up.php" method="POST">
+          <div class="sign-up-form">
+            <div class="name-container">
+              <label for="user-full-name">Nome completo:</label>
+              <input
+                class="default-input"
+                type="text"
+                id="user-full-name"
+                name="user_full_name"
+                required
+              >
+            </div>
+            <div class="document-birthday-container">
+              <div class="document-container">
+                <label for="cpf">CPF:</label>
+                <input
+                  class="default-input"
+                  type="text"
+                  id="cpf"
+                  name="cpf"
+                  size="30"
+                  required
+                >
+              </div>
+              <div class="birthday-container">
+                <label for="birthday">Data de nascimento</label>
+                <input
+                  class="default-input"
+                  type="date"
+                  id="birthday"
+                  name="birthday"
+                  required
+                >
+              </div>
+            </div>
+            <div class="phone-email-container">
+              <div class="email-container">
+                <label for="email">E-mail:</label>
+                <input
+                  class="default-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  size="25"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  required
+                >
+              </div>
+              <div class="phone-container">
+                <label for="phone">Telefone:</label>
+                <input
+                  class="default-input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  size="15"
+                  required
+                >
+              </div>
+            </div>
+            <div class="userName">
+              <div class="square-picture">
+                <img
+                  src="./../assets/icons/profile-picture.svg"
+                  class="avatar"
+                  alt="Imagem de perfil"
+                >
+              </div>
+              <div class="name-password-container">
+                <label for="nickname"></label>
+                <input
+                  class="default-input"
+                  type="text"
+                  id="nickname"
+                  name="nickname"
+                  size="35"
+                  required
+                  placeholder="Seu apelido no jogo"
+                >
+                <label for="password"></label>
+                <input
+                  class="default-input"
+                  type="password"
+                  id="password"
+                  name="user_password"
+                  required
+                  placeholder="Sua senha"
+                >
+              </div>
+            </div>
+            <div class="action-buttons">
+              <input
+                class="default-button sign-up-option-button"
+                type="submit"
+                value="Quero me cadastrar"
+                
+              >
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
 
-$sql = "select count(*) as total from user where cpf = '$cpf'";
-$result = mysqli_query($dbConnection, $sql);
-$row = mysqli_fetch_assoc($result);
-
-if ($row['total'] == 1){
-    $_SESSION['user_exists'] = true;
-    header("Location: sign_up.html"); 
-    exit();
-}
-
-$sql = "INSERT INTO user (user_full_name, cpf, birthday, email, phone, nickname, user_password) VALUES ('$user_full_name', '$cpf', '$birthday', '$email', '$phone', '$nickname', '$user_password')";
-
-if($dbConnection->query($sql) === TRUE){
-    $_SESSION['status_signup'] = true;
-}
-
-$dbConnection->close();
-
-header("Location: sign_up.html"); 
-exit();
-?>
+    <footer>
+        <p>Autores:</p>
+        <p>
+          Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e
+          Thamires Prado
+        </p>
+    </footer>
+  </body>
+</html>

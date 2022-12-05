@@ -1,4 +1,3 @@
 <?php
-    header("Location: src/login/login.html"); //alterar para php
-
+    header("Location: src/login/login.php"); //alterar para php
 ?>

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>Modo de Jogo</title>
-
     <link rel="icon" href="./../assets/icons/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="./select_mode.css">
@@ -11,37 +10,7 @@
   </head>
 
   <body>
-    <header class="main-header">
-      <nav class="left-navigation">
-        <a href="./../login/login.html" class="navigation-option">
-          <img
-            src="./../assets/icons/logoff.svg"
-            class="logoff-icon"
-            alt="Sair do jogo"
-          >
-          <p>Sair da conta</p>
-        </a>
-      </nav>
-      <nav class="right-navigation">
-        <a href="./../global-ranking/global_ranking.html" class="navigation-option">
-          <img
-            src="./../assets/icons/ranking.svg"
-            class="header-nav-icons"
-            alt="Ranking global"
-          >
-          <p>Ranking Global</p>
-        </a>
-        <a href="./../profile/profile.html" class="navigation-option">
-          <img
-            src="./../assets/icons/user.svg"
-            class="header-nav-icons"
-            alt="Meu perfil"
-          >
-          <p>Meu perfil</p>
-        </a>
-      </nav>
-    </header>
-
+    <?php require "../components/main_header.php" ?>
     <section class="main-container">
       <h1>Selecione o modo de jogo</h1>
 

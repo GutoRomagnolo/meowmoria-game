@@ -2,42 +2,25 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
+    <title>Meu perfil</title>
     <link rel="icon" href="./../assets/icons/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
-    <link rel="stylesheet" href="sign_up.css">
+    <link rel="stylesheet" href="profile.css">
   </head>
 
   <body>
-    <header class="main-header">
-      <nav class="left-navigation">
-        <a href="./../login/login.html" class="navigation-option">
-          <img
-            src="./../assets/icons/logoff.svg"
-            class="logoff-icon"
-            alt="Voltar"
-          >
-          <p>Voltar</p>
-        </a>
-      </nav>
-    </header>
-
+    <?php require "../components/back_header.php" ?>
     <main>
       <section>
-        <h1>Cadastro</h1>
-        <p>
-          Insira seus dados abaixo para criar sua<br>
-          conta e comecar a jogar.
-        </p>
-        <form action="sign_up.php" method="POST">
-          <div class="sign-up-form">
+        <h1>Meu perfil</h1>
+        <form>
+          <div class="profile-form">
             <div class="name-container">
               <label for="user-full-name">Nome completo:</label>
               <input
                 class="default-input"
                 type="text"
                 id="user-full-name"
-                name="user_full_name"
                 required
               >
             </div>
@@ -45,22 +28,20 @@
               <div class="document-container">
                 <label for="cpf">CPF:</label>
                 <input
-                  class="default-input"
+                  class="default-input disabled-input"
                   type="text"
                   id="cpf"
-                  name="cpf"
                   size="30"
-                  required
+                  readonly
                 >
               </div>
               <div class="birthday-container">
                 <label for="birthday">Data de nascimento</label>
                 <input
-                  class="default-input"
+                  class="default-input disabled-input"
                   type="date"
                   id="birthday"
-                  name="birthday"
-                  required
+                  readonly
                 >
               </div>
             </div>
@@ -71,7 +52,6 @@
                   class="default-input"
                   type="email"
                   id="email"
-                  name="email"
                   size="25"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   required
@@ -83,7 +63,6 @@
                   class="default-input"
                   type="tel"
                   id="phone"
-                  name="phone"
                   size="15"
                   required
                 >
@@ -100,12 +79,11 @@
               <div class="name-password-container">
                 <label for="nickname"></label>
                 <input
-                  class="default-input"
+                  class="default-input disabled-input"
                   type="text"
                   id="nickname"
-                  name="nickname"
                   size="35"
-                  required
+                  readonly
                   placeholder="Seu apelido no jogo"
                 >
                 <label for="password"></label>
@@ -113,19 +91,18 @@
                   class="default-input"
                   type="password"
                   id="password"
-                  name="user_password"
                   required
                   placeholder="Sua senha"
                 >
               </div>
             </div>
+            <div class="input-alerts">
+              Os campos que estao marcados em cinza nao podem ser alterados
+            </div>
             <div class="action-buttons">
-              <input
-                class="default-button sign-up-option-button"
-                type="submit"
-                value="Quero me cadastrar"
-                
-              >
+              <button class="default-button update-button" type="submit">
+                Atualizar
+              </button>
             </div>
           </div>
         </form>
@@ -133,11 +110,11 @@
     </main>
 
     <footer>
-        <p>Autores:</p>
-        <p>
-          Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e
-          Thamires Prado
-        </p>
+      <p>Autores:</p>
+      <p>
+        Carolina Noda, Gustavo Romagnolo, Marcos Medeiros, Mariana Araujo e
+        Thamires Prado
+      </p>
     </footer>
   </body>
 </html>
