@@ -1,3 +1,11 @@
+<?php
+$user_id = $_COOKIE["userId"] ?? "";
+
+// if (!$user_id) {
+//   header("location: ./../login/login.php");
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -13,14 +21,15 @@
     <main>
       <section>
         <h1>Meu perfil</h1>
-        <form>
+        <form id="profile-form">
           <div class="profile-form">
             <div class="name-container">
-              <label for="user-full-name">Nome completo:</label>
+              <label for="user_full_name">Nome completo:</label>
               <input
                 class="default-input"
                 type="text"
-                id="user-full-name"
+                id="user_full_name"
+                name="user_full_name"
                 required
               >
             </div>
@@ -31,6 +40,7 @@
                   class="default-input disabled-input"
                   type="text"
                   id="cpf"
+                  name="cpf"
                   size="30"
                   readonly
                 >
@@ -41,6 +51,7 @@
                   class="default-input disabled-input"
                   type="date"
                   id="birthday"
+                  name="birthday"
                   readonly
                 >
               </div>
@@ -52,6 +63,7 @@
                   class="default-input"
                   type="email"
                   id="email"
+                  name="email"
                   size="25"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   required
@@ -63,6 +75,7 @@
                   class="default-input"
                   type="tel"
                   id="phone"
+                  name="phone"
                   size="15"
                   required
                 >
@@ -82,15 +95,17 @@
                   class="default-input disabled-input"
                   type="text"
                   id="nickname"
+                  name="nickname"
                   size="35"
                   readonly
                   placeholder="Seu apelido no jogo"
                 >
-                <label for="password"></label>
+                <label for="user_password"></label>
                 <input
                   class="default-input"
                   type="password"
-                  id="password"
+                  id="user_password"
+                  name="user_password"
                   required
                   placeholder="Sua senha"
                 >
@@ -116,5 +131,7 @@
         Thamires Prado
       </p>
     </footer>
+
+    <script src="./profile.js"></script>
   </body>
 </html>
