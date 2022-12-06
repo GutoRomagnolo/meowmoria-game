@@ -1,6 +1,6 @@
 <header class="main-header">
   <nav class="left-navigation">
-    <a href="./../login/login.html" class="navigation-option">
+    <a href="./../login/login.php" class="navigation-option">
       <img
         src="./../assets/icons/logoff.svg"
         class="logoff-icon"

@@ -1,6 +1,6 @@
 <header class="main-header">
   <nav class="left-navigation">
-    <a href="./../login/login.html" class="navigation-option">
+    <a href="./../login/login.php" class="navigation-option"> 
       <img
         src="./../assets/icons/logoff.svg"
         class="logoff-icon"
@@ -10,7 +10,7 @@
     </a>
   </nav>
   <nav class="right-navigation">
-    <a href="./../global-ranking/global_ranking.html" class="navigation-option">
+    <a href="./../global-ranking/global_ranking.php" class="navigation-option">
       <img
         src="./../assets/icons/ranking.svg"
         class="header-nav-icons"
@@ -18,7 +18,7 @@
       >
       <p>Ranking Global</p>
     </a>
-    <a href="./../profile/profile.html" class="navigation-option">
+    <a href="./../profile/profile.php" class="navigation-option">
       <img
         src="./../assets/icons/user.svg"
         class="header-nav-icons"

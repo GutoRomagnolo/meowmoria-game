@@ -65,5 +65,6 @@
         Thamires Prado
       </p>
     </footer>
+    <script src="./../log_out/log_out.js"></script>
   </body>
 </html>

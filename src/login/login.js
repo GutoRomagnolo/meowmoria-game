@@ -5,6 +5,6 @@ const validateLoginInput = () => {
   if (userName.value === "" || password.value === "") {
     document.getElementById("both-inputs-invalid").style.display = "block";
   } else {
-    window.open("./../select-mode/select_mode.html", "_self");
+    window.open("./../select-mode/select_mode.php", "_self");
   }
 }

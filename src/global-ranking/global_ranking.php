@@ -11,37 +11,8 @@
   </head>
 
   <body>
-    <header class="main-header">
-      <nav class="left-navigation">
-        <a href="./../login/login.html" class="navigation-option">
-          <img
-            src="./../assets/icons/logoff.svg"
-            class="logoff-icon"
-            alt="Sair do jogo"
-          >
-          <p>Voltar</p>
-        </a>
-      </nav>
-      <nav class="right-navigation">
-        <a href="./../global-ranking/global_ranking.html" class="navigation-option">
-          <img
-            src="./../assets/icons/ranking.svg"
-            class="header-nav-icons"
-            alt="Ranking global"
-          >
-          <p>Ranking Global</p>
-        </a>
-        <a href="./../profile/profile.html" class="navigation-option">
-          <img
-            src="./../assets/icons/user.svg"
-            class="header-nav-icons"
-            alt="Meu perfil"
-          >
-          <p>Meu perfil</p>
-        </a>
-      </nav>
-    </header>
-
+    <?php require "../components/main_header.php" ?>
+    
     <main>
       <section>
         <h1>RANKING GLOBAL</h1>
@@ -255,5 +226,6 @@
         Thamires Prado
       </p>
     </footer>
+    <script src="./../log_out/log_out.js"></script>
   </body>
 </html>

@@ -2,45 +2,15 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <title>Jogo da memória - Contra o tempo</title>
+    <title>Jogo da memória - Modo Padrão</title>
     <link rel="icon" href="./../assets/icons/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
-    <link rel="stylesheet" href="./../standard-mode/standard_mode.css">
-    <link rel="stylesheet" href="./../against-time-mode/against_time_mode.css">
+    <link rel="stylesheet" href="standard_mode.css">
     <link rel="stylesheet" href="./../win-lose-page/win-lose-page.css">
   </head>
 
   <body>
-    <header class="main-header">
-      <nav class="left-navigation">
-        <a href="./../select-mode/select_mode.html" class="navigation-option" onclick="backToMenu()">
-          <img
-            src="./../assets/icons/logoff.svg"
-            class="logoff-icon"
-            alt="Sair do jogo"
-          >
-          <p>Sair do jogo</p>
-        </a>
-      </nav>
-      <nav class="right-navigation">
-        <a href="./../global-ranking/global_ranking.html" class="navigation-option">
-          <img
-            src="./../assets/icons/ranking.svg"
-            class="header-nav-icons"
-            alt="Ranking global"
-          >
-          <p>Ranking Global</p>
-        </a>
-        <a href="./../profile/profile.html" class="navigation-option">
-          <img
-            src="./../assets/icons/user.svg"
-            class="header-nav-icons"
-            alt="Meu perfil"
-          >
-          <p>Meu perfil</p>
-        </a>
-      </nav>
-    </header>
+    <?php require "../components/main_header.php" ?>
 
     <main id="general-container" class="general-container">
       <section class="lateral-menu">
@@ -51,7 +21,7 @@
         <div class="game-specifications">
           <div class="game-mode-container">
             <p>Modalidade:</p>
-            <p class="input-specification mode-title">Contra o tempo</p>
+            <p class="input-specification">Clássico</p>
           </div>
           <div class="board-size-container">
             <p>Tabuleiro:</p>
@@ -137,7 +107,8 @@
       </div>
     </main>
     <script src="./../win-lose-page/win-lose-page.js"></script>
-    <script src="./../standard-mode/standard_mode.js"></script>
-    <script src="./../standard-mode/count_down.js"></script>
+    <script src="./standard_mode.js"></script>
+    <script src="./counter_classic.js"></script>
+    <script src="./../log_out/log_out.js"></script>
   </body>
 </html>
