@@ -26,11 +26,10 @@ const startGame = () => {
   localStorage.setItem('gameMode', gameMode);
 
   if (gameMode == 'standard') {
-    window.open('./../standard-mode/standard_mode.html', '_self');
+    window.open('./../standard-mode/standard_mode.php', '_self');
   } else if (gameMode == 'against_time') {
-    window.open('./../against-time-mode/against_time_mode.html', '_self');
-  }
-  else {
+    window.open('./../against-time-mode/against_time_mode.php', '_self');
+  } else {
     document.getElementById('erro').style.visibility = 'visible';
   }
 }

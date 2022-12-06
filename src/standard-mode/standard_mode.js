@@ -10,7 +10,6 @@ let matchChance = [];
 
 const gameProgress = {
   gameMode: gameMode,
-  tableSize: 0,
   playerMatchs: 0,
   flipsMade: 0,
   gameIsRunning: false
@@ -21,15 +20,15 @@ flipsMadeCounter.innerHTML = `${gameProgress.flipsMade}`
 const resolveBoardSize = chosenSize => {
   switch (chosenSize) {
     case '4x4':
-      gameProgress.tableSize = 16;
+      gameProgress.boardSize = 16;
       generateBoardGame(8);
       break;
     case '6x6':
-      gameProgress.tableSize = 36;
+      gameProgress.boardSize = 36;
       generateBoardGame(18);
       break;
     case '8x8':
-      gameProgress.tableSize = 64;
+      gameProgress.boardSize = 64;
       generateBoardGame(32);
       break;
     default:
@@ -41,7 +40,7 @@ const resolveBoardSize = chosenSize => {
 }
 
 const backToMenu = () => {
-  window.open("./../select-mode/select_mode.html", "_self");
+  window.open("./../select-mode/select_mode.php", "_self");
   localStorage.clear();
 }
 
@@ -87,7 +86,7 @@ const generateBoardCard = index => {
   const { cardPlaces, cardBack, cardFront, cardFrontImage } = generateCardsElements();
 
   cardPlaces.classList.add('card-place');
-  if (gameProgress.tableSize === 64) {
+  if (gameProgress.boardSize === 64) {
     cardPlaces.style.height = '4.7rem';
   }
 
@@ -203,15 +202,20 @@ const flipCardsOnCheat = cheatState => {
 }
 
 const checkPlayerMatchs = () => {
-  if (gameProgress.playerMatchs === (gameProgress.tableSize / 2)) {
+  if (gameProgress.playerMatchs === (gameProgress.boardSize / 2)) {
     setTimeout(() => {
-      showMatchResult('victory', gameProgress.gameMode);
-
       gameProgress.gameMode === 'standard'
-        ? stopClassicCounter()
-        : stopCountDown('victory')
+        ? gameProgress.gameTime = stopClassicCounter()
+        : gameProgress.gameTime = stopCountDown()
+      
+      showMatchResult('victory', gameProgress);
     }, 500)
   }
+}
+
+const callDefeat = () => {
+  gameProgress.gameTime = stopCountDown();
+  showMatchResult('defeat', gameProgress);
 }
 
 resolveBoardSize(boardChosenSize);

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="./../standard-mode/standard_mode.css">
     <link rel="stylesheet" href="./../against-time-mode/against_time_mode.css">
-    <link rel="stylesheet" href="./../win-lose-page/win-lose-page.css">
+    <link rel="stylesheet" href="./../game-result/game_result.css">
   </head>
 
   <body>
@@ -107,7 +107,7 @@
         </section>
       </div>
     </main>
-    <script src="./../win-lose-page/win-lose-page.js"></script>
+    <script src="./../game-result/game_result.js"></script>
     <script src="./../standard-mode/standard_mode.js"></script>
     <script src="./../standard-mode/count_down.js"></script>
     <script src="./../log_out/log_out.js"></script>

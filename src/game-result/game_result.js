@@ -1,11 +1,11 @@
 let gameModeToRematch = null;
 let resultInformations = null;
-const standardRematchUrl = "./../standard-mode/standard_mode.html"
-const againstTimeRematchUrl = "./../against-time-mode/against_time_mode.html"
+const standardRematchUrl = "./../standard-mode/standard_mode.php"
+const againstTimeRematchUrl = "./../against-time-mode/against_time_mode.php"
 
-const showMatchResult = (result, gameMode) => {
-  gameModeToRematch = gameMode;
-
+const showMatchResult = (result, gameResult) => {
+  gameModeToRematch = gameResult.gameMode;
+  
   const resultMapper = {
     defeat: {
       image: "../assets/icons/fail.svg",
@@ -18,6 +18,7 @@ const showMatchResult = (result, gameMode) => {
   };
 
   resultInformations = resultMapper[result];
+  registerGameResult(gameResult);
 
 
   document.getElementById("board-container").style.background = "rgba(221, 221, 221, 0.7)";
@@ -34,6 +35,13 @@ const showMatchResult = (result, gameMode) => {
         </div>
       </div>
     `;
+}
+
+const registerGameResult = async gameResult => {
+  await fetch('./../game-result/game_result.php', {
+    method: 'POST',
+    body: JSON.stringify(gameResult)
+  });
 }
 
 const closeMatchResult = () => {

@@ -31,11 +31,11 @@
   $gameResultsTable = "CREATE TABLE IF NOT EXISTS game_results(
     id INT NOT NULL AUTO_INCREMENT,
     player_id  INT NOT NULL,
-    game_time TIME NOT NULL,
+    game_time FLOAT NOT NULL,
     game_mode TEXT NOT NULL,
     score INT NOT NULL,
-    attempts INT, 
-    table_size TEXT NOT NULL,
+    attempts INT NOT NULL,
+    board_size INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(player_id) REFERENCES user(id)
   )";
