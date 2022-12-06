@@ -43,7 +43,7 @@
             <p id="both-inputs-invalid" style="display:none">Insira Usuário e Senha para logar!</p>
           </div>
           <div class="sign-up-option-container">
-            <a class="sign-up-option-button" href="./../sign-up/sign_up.html">
+            <a class="sign-up-option-button" href="./../sign-up/sign_up.php">
               Quero me cadastrar
             </a>
           </div>

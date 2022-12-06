@@ -196,14 +196,15 @@ form {
   font-size: 1.875rem;
   color: #FFFEFE;
   box-shadow: -0.25rem 0 0 0 black,
-              0.25rem 0 0 0 black,
-              0 -0.25rem 0 0 black,
-              0 0.25rem 0 0 black;
+    0.25rem 0 0 0 black,
+    0 -0.25rem 0 0 black,
+    0 0.25rem 0 0 black;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
 .default-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .sign-up-option-button {

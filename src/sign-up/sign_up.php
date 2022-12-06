@@ -17,7 +17,7 @@
           Insira seus dados abaixo para criar sua<br>
           conta e comecar a jogar.
         </p>
-        <form action="sign_up.php" method="POST">
+        <form id="sign-up-form">
           <div class="sign-up-form">
             <div class="name-container">
               <label for="user-full-name">Nome completo:</label>
@@ -112,7 +112,6 @@
                 class="default-button sign-up-option-button"
                 type="submit"
                 value="Quero me cadastrar"
-                
               >
             </div>
           </div>
@@ -127,5 +126,6 @@
           Thamires Prado
         </p>
     </footer>
+  <script src="./sign_up.js"></script>
   </body>
 </html>
