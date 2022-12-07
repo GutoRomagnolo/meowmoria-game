@@ -3,7 +3,7 @@ $hostname = 'localhost';
 $database = 'meowmoria_game';
 $user = 'root';
 $password = '';
-$port = '3307';
+$port = '3306';
 
 try {
   $dbConnection = new PDO("mysql:host=$hostname;port=$port", $user, $password);
