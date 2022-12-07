@@ -59,7 +59,6 @@ const getDataRanking = async gameMode => {
           <div class="player-name-table-ranking">${item.nickname}</div>
           <div class="game-mode-table-ranking">${game_mode} ${Math.sqrt(item.board_size)}x${Math.sqrt(item.board_size)}</div>
           <div class="match-details-table-ranking">
-            <div class="date-table-ranking">02/02/2022 22:22</div>
             <div class="plays-duration-table-ranking">
               <div>
                 <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> ${item.game_time}s

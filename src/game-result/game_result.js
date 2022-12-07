@@ -53,3 +53,57 @@ const startRematch = () => {
     ? window.open(standardRematchUrl, "_self")
     : window.open(againstTimeRematchUrl, "_self")
 }
+
+const getDataRanking = async (gameMode) => {
+  const table_ranking = document.getElementById('table-ranking');
+  const request = await fetch(`../global-ranking/ranking_resultset.php?gameMode=${gameMode}&historic=1`);
+  const data = await request.json();
+
+  table_ranking.innerHTML = '';
+
+  if (data.length > 0) {
+    data.forEach((item, index) => {
+      let game_mode = (item.game_mode == 'standard') ? 'Clássico' : 'Contra o tempo';
+      let ranking_position = index + 1;
+      let trophy_icon = null;
+  
+      if (ranking_position === 1) {
+        trophy_icon = {
+          "className": "first-place-trophy",
+          "alt": "Troféu Primeiro Lugar"
+        }
+      } else if (ranking_position === 2) {
+        trophy_icon = {
+          "className": "second-place-trophy",
+          "alt": "Troféu Segundo Lugar"
+        }
+      } else if (ranking_position === 3) {
+        trophy_icon = {
+          "className": "third-place-trophy",
+          "alt": "Troféu Terceiro Lugar"
+        }
+      } else {
+        trophy_icon = null;
+      }
+  
+      table_ranking.innerHTML += 
+        `<div class="ranking-card">
+          <div class="ranking-card-content">
+            <div class="player-name-icon-container">
+              ${trophy_icon ? `<img class="${trophy_icon.className}" src="../assets/icons/trophy.svg" alt="${trophy_icon.alt}">` : ""}
+              <p class="player-name">${item.nickname}</p>
+            </div>
+            <p>${game_mode} ${Math.sqrt(item.board_size)}x${Math.sqrt(item.board_size)}</p>
+            <div class="date-time-container">
+              <div class="ranking-time">
+                <img src="./../assets/icons/clock.svg" class="clock-icon" alt="Ícone relógio">&nbsp;
+                <p>${item.game_time} s</p>
+              </div>
+            </div>
+          </div>
+        </div>`
+    });
+  } else {
+    table_ranking.innerHTML += `<div class="zero-results">Nenhum resultado foi encontrado</div>`;
+  }
+}
