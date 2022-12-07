@@ -16,18 +16,20 @@ $sql = $dbConnection->prepare('
       user
    WHERE
       nickname = ?
+   LIMIT
+      1
 ');
 $sql->bindParam(1, $user_name, PDO::PARAM_INT);
 $sql->execute();
-$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+$result = $sql->fetch(PDO::FETCH_ASSOC);
 
-$db_user_password = $result->user_password ?? "";
+$db_user_password = $result["user_password"] ?? "";
 $user_password = $_POST["user_password"] ?? "";
 
 if ($result) {
-   if (password_verify($db_user_password, $user_password)) {
+   if (password_verify($user_password, $db_user_password)) {
       echo 'successfully_init_session';
-      $_SESSION['userId'] = $result->id;
+      $_SESSION['userId'] = $result["id"];
       exit();
    }
 }

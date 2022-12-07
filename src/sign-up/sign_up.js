@@ -14,6 +14,7 @@ signUpForm.addEventListener('submit', async event => {
       alert('Esse CPF já está cadastrado.')
     } else if (resultText === 'successfully_sign_up') {
       alert('Usuário cadastrado!');
+      window.open("./../select-mode/select_mode.php", "_self");
     }
 
   } catch(error) {
