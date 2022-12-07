@@ -27,14 +27,16 @@ const stopCountDown = () => {
 }
 
 const countDown = () => {
-  seconds--;
-
-  if (minutes === 00 && seconds === 00) {
+  if (minutes === 0 && seconds === 0) {
     callDefeat();
-  } else if (seconds === 00 && minutes > 0) {
+  } else if (seconds === 0 && minutes > 0) {
+    console.log("AAAA")
     minutes--;
     seconds = 59;
+  } else {
+    seconds--;
   }
+
   document.getElementById("timer").innerText = setTwoDigits(minutes) + ":" + setTwoDigits(seconds);
 }
 
@@ -53,6 +55,7 @@ const mapTimer = boardSize => {
 
   if (boardSize === '8x8') {
     startMinute = 2;
+    startSeconds = 0;
   }
 
   minutes = startMinute;

@@ -33,7 +33,6 @@
     player_id  INT NOT NULL,
     game_time FLOAT NOT NULL,
     game_mode TEXT NOT NULL,
-    score INT NOT NULL,
     attempts INT NOT NULL,
     board_size INT NOT NULL,
     PRIMARY KEY(id),

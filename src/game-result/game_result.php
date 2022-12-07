@@ -8,7 +8,6 @@ $mappedGameResult = json_decode($gameResultJSON);
 
 $gameTime = $mappedGameResult->gameTime;
 $gameMode = $mappedGameResult->gameMode;
-$score = 1;
 $attempts = $mappedGameResult->flipsMade;
 $boardSize = $mappedGameResult->boardSize;
 $playerId = 1;
@@ -17,14 +16,12 @@ $insertGameResult = "INSERT INTO game_results(
   player_id,
   game_time,
   game_mode,
-  score,
   attempts,
   board_size
   ) VALUES (
     '$playerId',
     '$gameTime',
     '$gameMode',
-    '$score',
     '$attempts',
     '$boardSize'
   )

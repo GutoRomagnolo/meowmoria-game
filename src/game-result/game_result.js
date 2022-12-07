@@ -20,7 +20,6 @@ const showMatchResult = (result, gameResult) => {
   resultInformations = resultMapper[result];
   registerGameResult(gameResult);
 
-
   document.getElementById("board-container").style.background = "rgba(221, 221, 221, 0.7)";
   document.getElementById("board-place").style.opacity = "0.3";
   document.getElementById("board-container").innerHTML += `
