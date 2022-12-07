@@ -28,7 +28,7 @@
             Contra o Tempo
           </button>
         </div>
-        <div class="table-ranking">
+        <div id="table-ranking" class="table-ranking">
           <div class="item-table-ranking">
             <div class="trophy-table-ranking">
               <img class="first-place-trophy" src="../assets/icons/trophy.svg" alt="Troféu Primeiro Lugar">
