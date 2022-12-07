@@ -1,5 +1,7 @@
 <?php
-$user_id = $_COOKIE["userId"] ?? "";
+session_start();
+$user_id = $_SESSION["user_id"];
+// $user_id = $_COOKIE["userId"] ?? "";
 
 // if (!$user_id) {
 //   header("location: ./../login/login.php");

@@ -5,7 +5,7 @@
   $password = '';
 
   try {
-    $dbConnection = new PDO("mysql:host=$hostname", $user, $password);
+    $dbConnection = new PDO("mysql:host=$hostname;port=3307", $user, $password); //ATENÇAO MUDAR AQUI DEPOIS!!!! 
     $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch(PDOException $exception) {
     echo "Connection failed: " . $exception->getMessage();

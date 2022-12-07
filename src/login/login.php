@@ -23,24 +23,25 @@
         <p class="page-subtitle">
           Se divirta tentando encontrar gatinhos <br> fofinhos!
         </p>
-        <form class="sign-up-form">
+        <form class="sign-up-form" action="user_authentication.php" method="POST">
           <div class="user-data">
             <div class="login-title">
               <p>Faca login para enfrentar outros players!</p>
             </div>
             <div class="username-password-container">
-              <input id="userName" class="login-input" placeholder="Usuário">
+              <input id="userName" class="login-input" placeholder="Usuário" name="username" required>
               <input
                 id="password"
                 class="login-input"
                 type="password"
                 placeholder="Senha"
+                name="user_password"
+                required
               >
-              <a class="login-button-container" onclick="validateLoginInput()">
-                Entrar no jogo
-              </a>
+              <button type="submit" class="login-button-container">Entrar no jogo</button>
             </div>
             <p id="both-inputs-invalid" style="display:none">Insira Usuário e Senha para logar!</p>
+            <p id="login-error" style="display:none">Usuário e/ou senha incorretos</p>
           </div>
           <div class="sign-up-option-container">
             <a class="sign-up-option-button" href="./../sign-up/sign_up.php">

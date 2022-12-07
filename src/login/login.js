@@ -8,3 +8,7 @@ const validateLoginInput = () => {
     window.open("./../select-mode/select_mode.php", "_self");
   }
 }
+
+function showMessage () {
+  document.getElementById("login-error").style.display = "block";
+}
