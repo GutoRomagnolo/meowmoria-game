@@ -23,7 +23,7 @@
     email VARCHAR(50) NOT NULL,
     phone VARCHAR(20) NOT NULL,
     nickname VARCHAR(50) NOT NULL,
-    user_password VARCHAR(30) NOT NULL,
+    user_password VARCHAR(255) NOT NULL,
     PRIMARY KEY(id)
   )";
   $dbConnection->exec($userTable);

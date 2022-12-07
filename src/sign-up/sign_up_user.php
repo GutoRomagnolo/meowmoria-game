@@ -9,7 +9,7 @@ $birthday = $_POST['birthday'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $nickname = $_POST['nickname'];
-$user_password = $_POST['user_password'];
+$hash = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
 
 $usersWithSameCPF = $dbConnection->query("SELECT * FROM user WHERE cpf = '$cpf'");
 
@@ -33,7 +33,7 @@ $sql = "INSERT INTO user(
     '$email',
     '$phone',
     '$nickname',
-    '$user_password'
+    '$hash'
   )";
 
 if ($dbConnection->query($sql)) {
