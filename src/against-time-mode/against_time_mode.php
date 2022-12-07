@@ -18,7 +18,7 @@ verify_exists_session();
   </head>
 
   <body>
-    <?php require_once "../components/main_header.php" ?>
+    <?php require_once "../components/back_header.php" ?>
     
     <main id="general-container" class="general-container">
       <section class="lateral-menu">
