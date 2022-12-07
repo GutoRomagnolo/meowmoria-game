@@ -16,8 +16,6 @@ window.addEventListener('DOMContentLoaded', async event => {
     document.getElementById('email').value = user.email;
     document.getElementById('phone').value = user.phone;
     document.getElementById('nickname').value = user.nickname;
-    document.getElementById('user_password').value = user.user_password;
-
   } catch(error) {
     console.log("Ocorreu um erro ao cadastrar o usuário: ", error);
   }
