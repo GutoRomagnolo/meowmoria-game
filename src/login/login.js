@@ -10,7 +10,7 @@ loginForm.addEventListener('submit', async event => {
 
     const resultText = await response.text();
 
-    if(resultText === 'successfully_init_session') {
+    if (resultText === 'successfully_init_session') {
       window.open("./../select-mode/select_mode.php", "_self");
     } else if (resultText === 'user_or_password_incorrect') {
       alert('Seus dados de acesso estão incorretos, digite novamente.');
