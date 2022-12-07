@@ -39,7 +39,7 @@ profileForm.addEventListener('submit', async event => {
       alert('Usuário cadastrado!')
     }
 
-    alert('Usuário cadastrado com sucesso!')
+    alert('Usuário alterado com sucesso!')
   } catch(error) {
     console.log("Ocorreu um erro ao cadastrar o usuário: ", error);
   }
