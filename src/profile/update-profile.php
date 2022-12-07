@@ -12,9 +12,9 @@ $password = $_POST["password"];
 
 try {
   $sql = $dbConnection->prepare("
-    UPDATE 
-      users 
-    SET 
+    UPDATE
+      users
+    SET
       user_full_name = ?,
       cpf = ?,
       birthday = ?,
@@ -22,7 +22,7 @@ try {
       phone = ?,
       nickname = ?,
       password = ?
-    WHERE 
+    WHERE
       id = ?
   ");
   $sql->bindParam(1, $user_full_name, PDO::PARAM_STR);

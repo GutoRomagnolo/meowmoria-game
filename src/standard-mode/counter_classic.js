@@ -20,6 +20,7 @@ const startCounterClassic = () => {
 
 const stopClassicCounter = () => {
   clearInterval(interval);
+  return second + (minute * 60)
 }
 
 const counter = () => {

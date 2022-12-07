@@ -20,11 +20,11 @@ if ($usersWithSameCPF->rowCount()) {
 
 $sql = "INSERT INTO user(
   user_full_name,
-  cpf, 
-  birthday, 
-  email, 
-  phone, 
-  nickname, 
+  cpf,
+  birthday,
+  email,
+  phone,
+  nickname,
   user_password
   ) VALUES (
     '$user_full_name',
