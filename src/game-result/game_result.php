@@ -15,11 +15,11 @@ $boardSize = $mappedGameResult->boardSize;
 $playerId = $_SESSION["userId"];
 
 $insertGameResult = "INSERT INTO game_results(
-    player_id,
-    game_time,
-    game_mode,
-    attempts,
-    board_size
+  player_id,
+  game_time,
+  game_mode,
+  attempts,
+  board_size
   ) VALUES (
     '$playerId',
     '$gameTime',
