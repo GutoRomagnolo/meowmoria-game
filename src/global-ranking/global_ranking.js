@@ -24,52 +24,56 @@ const getDataRanking = async gameMode => {
   const data = await request.json();
 
   table_ranking.innerHTML = '';
+
+  if (data.length > 0) {
+    data.forEach((item, index) => {
+      let game_mode = (item.game_mode == 'standard') ? 'Clássico' : 'Contra o tempo';
+      let ranking_position = index + 1;
+      let trophy_icon = null;
   
-  data.forEach((item, index) => {
-    let game_mode = (item.game_mode == 'standard') ? 'Clássico' : 'Contra o tempo';
-    let ranking_position = index + 1;
-    let trophy_icon = null;
-
-    if (ranking_position === 1) {
-      trophy_icon = {
-        "className": "first-place-trophy",
-        "alt": "Troféu Primeiro Lugar"
+      if (ranking_position === 1) {
+        trophy_icon = {
+          "className": "first-place-trophy",
+          "alt": "Troféu Primeiro Lugar"
+        }
+      } else if (ranking_position === 2) {
+        trophy_icon = {
+          "className": "second-place-trophy",
+          "alt": "Troféu Segundo Lugar"
+        }
+      } else if (ranking_position === 3) {
+        trophy_icon = {
+          "className": "third-place-trophy",
+          "alt": "Troféu Terceiro Lugar"
+        }
+      } else {
+        trophy_icon = null;
       }
-    } else if (ranking_position === 2) {
-      trophy_icon = {
-        "className": "second-place-trophy",
-        "alt": "Troféu Segundo Lugar"
-      }
-    } else if (ranking_position === 3) {
-      trophy_icon = {
-        "className": "third-place-trophy",
-        "alt": "Troféu Terceiro Lugar"
-      }
-    } else {
-      trophy_icon = null;
-    }
-
-    table_ranking.innerHTML += 
-      `<div class="item-table-ranking">
-        <div class="trophy-table-ranking">
-          ${trophy_icon ? `<img class="${trophy_icon.className}" src="../assets/icons/trophy.svg" alt="${trophy_icon.alt}">` : ""}
-        </div>
-        <div class="position-table-ranking">${ranking_position}</div>
-        <div class="player-name-table-ranking">${item.nickname}</div>
-        <div class="game-mode-table-ranking">${game_mode} ${Math.sqrt(item.board_size)}x${Math.sqrt(item.board_size)}</div>
-        <div class="match-details-table-ranking">
-          <div class="date-table-ranking">02/02/2022 22:22</div>
-          <div class="plays-duration-table-ranking">
-            <div>
-              <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> ${item.game_time}s
-            </div>
-            <div>
-              <img src="../assets/icons/play.svg" height="12" alt="Número de jogadas"> ${item.attempts}
+  
+      table_ranking.innerHTML += 
+        `<div class="item-table-ranking">
+          <div class="trophy-table-ranking">
+            ${trophy_icon ? `<img class="${trophy_icon.className}" src="../assets/icons/trophy.svg" alt="${trophy_icon.alt}">` : ""}
+          </div>
+          <div class="position-table-ranking">${ranking_position}</div>
+          <div class="player-name-table-ranking">${item.nickname}</div>
+          <div class="game-mode-table-ranking">${game_mode} ${Math.sqrt(item.board_size)}x${Math.sqrt(item.board_size)}</div>
+          <div class="match-details-table-ranking">
+            <div class="date-table-ranking">02/02/2022 22:22</div>
+            <div class="plays-duration-table-ranking">
+              <div>
+                <img src="../assets/icons/clock.svg" height="12" alt="Tempo da partida"> ${item.game_time}s
+              </div>
+              <div>
+                <img src="../assets/icons/play.svg" height="12" alt="Número de jogadas"> ${item.attempts}
+              </div>
             </div>
           </div>
-        </div>
-      </div>`
-  });
+        </div>`
+    });
+  } else {
+    table_ranking.innerHTML += `<div class="zero-results">Nenhum resultado foi encontrado</div>`;
+  }
 }
 
 window.addEventListener('DOMContentLoaded', async event => {

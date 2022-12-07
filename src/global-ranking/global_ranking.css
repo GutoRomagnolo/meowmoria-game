@@ -202,6 +202,11 @@ input {
   gap: 0.5rem;
 }
 
+.zero-results {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
 ::placeholder {
     font-family: 'Nintendo DS BIOS';
     font-style: normal;
