@@ -110,6 +110,5 @@
     <script src="./../game-result/game_result.js"></script>
     <script src="./../standard-mode/standard_mode.js"></script>
     <script src="./../standard-mode/count_down.js"></script>
-    <script src="./../log_out/log_out.js"></script>
   </body>
 </html>

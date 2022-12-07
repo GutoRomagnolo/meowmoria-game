@@ -109,6 +109,5 @@
     <script src="./../game-result/game_result.js"></script>
     <script src="./standard_mode.js"></script>
     <script src="./counter_classic.js"></script>
-    <script src="./../log_out/log_out.js"></script>
   </body>
 </html>
