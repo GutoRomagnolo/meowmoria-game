@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <?php require "../components/main_header.php" ?>
+    <?php require_once "../components/main_header.php" ?>
     
     <main>
       <section>

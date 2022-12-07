@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+require_once "../utils.php";
+
+avoid_start_session();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -6,7 +13,6 @@
     <link rel="icon" href="./../assets/icons/favicon.png">
     <link rel="stylesheet" href="./../reset.css">
     <link rel="stylesheet" href="login.css">
-    <script src="./login.js"></script>
   </head>
 
   <body>
@@ -23,15 +29,15 @@
         <p class="page-subtitle">
           Se divirta tentando encontrar gatinhos <br> fofinhos!
         </p>
-        <form class="sign-up-form" action="user_authentication.php" method="POST">
+        <form id="login-form" class="sign-up-form">
           <div class="user-data">
             <div class="login-title">
               <p>Faca login para enfrentar outros players!</p>
             </div>
             <div class="username-password-container">
-              <input id="userName" class="login-input" placeholder="Usuário" name="username" required>
+              <input id="user_name" class="login-input" placeholder="Usuário" name="user_name" required>
               <input
-                id="password"
+                id="user_password"
                 class="login-input"
                 type="password"
                 placeholder="Senha"
@@ -51,6 +57,7 @@
         </form>
       </section>
     </main>
-    <?php require "../components/footer.php" ?>
+    <?php require_once "../components/footer.php" ?>
+    <script src="./login.js"></script>
   </body>
 </html>

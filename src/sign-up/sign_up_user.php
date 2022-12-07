@@ -1,6 +1,8 @@
 <?php
 ini_set("display_errors", "on");
 error_reporting(E_ALL);
+session_start();
+
 require("./../database.php");
 
 $user_full_name = $_POST['user_full_name'];
@@ -19,13 +21,13 @@ if ($usersWithSameCPF->rowCount()) {
 }
 
 $sql = "INSERT INTO user(
-  user_full_name,
-  cpf,
-  birthday,
-  email,
-  phone,
-  nickname,
-  user_password
+    user_full_name,
+    cpf,
+    birthday,
+    email,
+    phone,
+    nickname,
+    user_password
   ) VALUES (
     '$user_full_name',
     '$cpf',
@@ -34,7 +36,7 @@ $sql = "INSERT INTO user(
     '$phone',
     '$nickname',
     '$hash'
-  )";
+)";
 
 if ($dbConnection->query($sql)) {
   $_SESSION["userId"] = $dbConnection->lastInsertId();

@@ -13,7 +13,7 @@ signUpForm.addEventListener('submit', async event => {
     if(resultText === 'same_cpf_sign_up'){
       alert('Esse CPF já está cadastrado.')
     } else if (resultText === 'successfully_sign_up') {
-      alert('Usuário cadastrado!')
+      alert('Usuário cadastrado!');
     }
 
   } catch(error) {

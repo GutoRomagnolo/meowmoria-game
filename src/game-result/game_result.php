@@ -1,6 +1,7 @@
 <?php
 ini_set("display_errors", "on");
 error_reporting(E_ALL);
+
 require("./../database.php");
 
 $gameResultJSON = file_get_contents('php://input');
@@ -10,14 +11,14 @@ $gameTime = $mappedGameResult->gameTime;
 $gameMode = $mappedGameResult->gameMode;
 $attempts = $mappedGameResult->flipsMade;
 $boardSize = $mappedGameResult->boardSize;
-$playerId = 1;
+$playerId = $_SESSION["userId"];
 
 $insertGameResult = "INSERT INTO game_results(
-  player_id,
-  game_time,
-  game_mode,
-  attempts,
-  board_size
+    player_id,
+    game_time,
+    game_mode,
+    attempts,
+    board_size
   ) VALUES (
     '$playerId',
     '$gameTime',

@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+require_once "../utils.php";
+
+verify_exists_session();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -10,7 +17,7 @@
   </head>
 
   <body>
-    <?php require "../components/main_header.php" ?>
+    <?php require_once "../components/main_header.php" ?>
 
     <main id="general-container" class="general-container">
       <section class="lateral-menu">

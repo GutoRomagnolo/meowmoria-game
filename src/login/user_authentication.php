@@ -1,26 +1,38 @@
 <?php
-$mysqli = new mysqli("localhost","root","", "meowmoria_game", 3307);
+ini_set("display_errors", "on");
+error_reporting(E_ALL);
 
-$username = $_POST['username'];
+session_start();
 
-$query = 'SELECT id, user_password FROM user WHERE nickname = ?';
-$stmt = $mysqli->prepare( $query );
-$stmt->bind_param("s", $username);
-$stmt->execute();
+require_once "./../utils.php";
+require("./../database.php");
 
-$stmt->bind_result($userId, $hash);
-$stmt->fetch();
+$user_name = $_POST["user_name"];
 
-if (password_verify( $_POST['user_password'], $hash) ) {
-   echo 'Logado';
-   session_start();
-   $_SESSION['valid'] = true;
-   $_SESSION['timeout'] = time();
-   $_SESSION['user_id'] = $row['$id'];
-   header("Location: ./../select-mode/select_mode.php");
-} else {
-   echo 'Usuario e/ou senha invalidos';
-   header("Location: login.php");
+$sql = $dbConnection->prepare('
+   SELECT
+      id, user_password
+   FROM
+      user
+   WHERE
+      nickname = ?
+');
+$sql->bindParam(1, $user_name, PDO::PARAM_INT);
+$sql->execute();
+$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$db_user_password = $result->user_password ?? "";
+$user_password = $_POST["user_password"] ?? "";
+
+if ($result) {
+   if (password_verify($db_user_password, $user_password)) {
+      echo 'successfully_init_session';
+      $_SESSION['userId'] = $result->id;
+      exit();
+   }
 }
 
+echo 'user_or_password_incorrect';
+
+$dbConnection = null;
 ?>

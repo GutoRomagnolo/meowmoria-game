@@ -1,6 +1,9 @@
 <?php
 session_start();
-echo $_SESSION['user_id'];
+
+require_once "../utils.php";
+
+verify_exists_session();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +17,7 @@ echo $_SESSION['user_id'];
   </head>
 
   <body>
-    <?php require "../components/main_header.php" ?>
+    <?php require_once "../components/main_header.php" ?>
     <section class="main-container">
       <h1>Selecione o modo de jogo</h1>
 

@@ -1,13 +1,10 @@
 <?php
 session_start();
-$user_id = $_SESSION["user_id"];
-// $user_id = $_COOKIE["userId"] ?? "";
 
-// if (!$user_id) {
-//   header("location: ./../login/login.php");
-// }
+require_once "../utils.php";
+
+verify_exists_session();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -19,7 +16,7 @@ $user_id = $_SESSION["user_id"];
   </head>
 
   <body>
-    <?php require "../components/back_header.php" ?>
+    <?php require_once "../components/back_header.php" ?>
     <main>
       <section>
         <h1>Meu perfil</h1>

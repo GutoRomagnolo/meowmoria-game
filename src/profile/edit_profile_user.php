@@ -1,10 +1,11 @@
 <?php
 ini_set("display_errors", "on");
 error_reporting(E_ALL);
+session_start();
+
 require("./../database.php");
 
-$user_id = $_COOKIE["userId"] ?? "";
-
+$user_id = $_SESSION["userId"] ?? "";
 $user_full_name = $_POST['user_full_name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];

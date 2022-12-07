@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+require_once "../utils.php";
+
+avoid_start_session();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -9,7 +16,7 @@
   </head>
 
   <body>
-    <?php require "../components/back_header.php" ?>
+    <?php require_once "../components/back_header.php" ?>
     <main>
       <section>
         <h1>Cadastro</h1>
